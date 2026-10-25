@@ -3,7 +3,7 @@ import Section from "./Section.jsx";
 import Note from "./Note.jsx";
 import styles from "./Results.module.css";
 
-function Table({ data }) {
+export function Table({ data }) {
   return (
     <div className={styles.wrap}>
       <table className={styles.table}>

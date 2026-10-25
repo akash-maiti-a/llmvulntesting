@@ -165,10 +165,40 @@ export const finetuneCards = [
   },
   {
     tag: "Status",
-    title: "Pipeline validated",
-    body: "A 10-step smoke run completed end-to-end: base model loaded, LoRA attached, all steps ran, adapter saved, and the scanner's unit suite passes 34/34. A full multi-epoch run is the next step; the fine-tuned model is not yet claimed to beat the 8B base.",
+    title: "Round 4 — measured & training",
+    body: "The reward and dataset ideas from round 3 are now implemented and measured: the format escape-hatch is closed, JSON parsing is hardened, and the training mix is rebalanced (true-positive share 31% → 43%). A 50-step GRPO run is training on the improved setup against a fixed base-model baseline; the unit suite passes 36/36.",
   },
 ];
+
+// Round 4: the documented ideas, now implemented with a measured effect each.
+export const stage4Improvements = {
+  caption: "Round 4 · ideas implemented and measured",
+  columns: ["Area", "Change", "Measured effect"],
+  rows: [
+    { cells: ["Reward escape-hatch", "format penalty −1.0 → −2.5", "garbage (−2.5) now scores below the worst miss (−2.3)"] },
+    { cells: ["Parse robustness", "decode first complete verdict object", "a stray { in the analysis no longer mis-parses"] },
+    { cells: ["Dev scoring", "report majority-class baseline + lift", "accuracy read against the 73% line, not raw"] },
+    { cells: ["Training mix", "cap single-label sources at 120", "SARD FPs 300 → 120; TP share 31% → 43%"] },
+  ],
+};
+
+// The base model's dev behaviour — the line the fine-tuned adapter must beat.
+export const rlBaselineTable = {
+  caption: "RL baseline · base qwen3:4b on the 111-alert dev split",
+  columns: ["Metric", "Base qwen3:4b", "Reading"],
+  rows: [
+    { cells: ["Accuracy", "38.7%", "below the 73% majority baseline"] },
+    { cells: ["True positives kept", "100%", "keeps all 30 real bugs"], highlight: true },
+    { cells: ["False positives removed", "16%", "drops only 13 of 81"] },
+    { cells: ["Brier score", "0.554", "confidence poorly calibrated"] },
+  ],
+};
+
+export const stage4Note = {
+  mark: "⏳",
+  title: "Stage-4 run in progress.",
+  body: "A 50-step GRPO run is training on the improved reward and rebalanced corpus (Qwen3-4B 4-bit + LoRA, 8 GB RTX 4060). When it finishes, the adapter is scored against the baseline above — the goal is to raise false-positive removal while holding true-positive retention near 100%.",
+};
 
 export const engineeringPoints = [
   {
@@ -189,7 +219,7 @@ export const engineeringPoints = [
   },
   {
     strong: "Tested.",
-    rest: " A pytest suite covers the parsers, CVE fix-diff ground truth, CWE matching, scoring, triage, and the RL reward resulted in 34 passing tests.",
+    rest: " A pytest suite covers the parsers, CVE fix-diff ground truth, CWE matching, scoring, triage, and the RL reward — 36 passing tests.",
   },
   {
     strong: "One command to run it all.",
