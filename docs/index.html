@@ -1,0 +1,426 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>vulnscan — LLM-assisted vulnerability scanner</title>
+<meta name="description" content="vulnscan: static analyzers (Semgrep, Pysa) produce candidate findings that a local LLM triages, scored against ground truth from deliberately vulnerable apps, a synthetic benchmark, and real CVEs." />
+<meta property="og:title" content="vulnscan — LLM-assisted vulnerability scanner" />
+<meta property="og:description" content="Semgrep + Pysa findings triaged by a local LLM, measured against ground truth. Precision lifted 38%→50% on real apps while keeping 91% of true positives." />
+<meta property="og:type" content="website" />
+<style>
+  :root{
+    --bg:#0a0a0b;
+    --bg-soft:#101012;
+    --panel:#141417;
+    --panel-2:#17171b;
+    --line:#26262c;
+    --line-soft:#1e1e22;
+    --text:#ececed;
+    --muted:#a0a0a8;
+    --faint:#6f6f78;
+    --accent:#f4f4f5;
+    --good:#d7e3d7;
+    --bad:#e4d4d4;
+    --radius:14px;
+    --mono:ui-monospace,"SF Mono","Cascadia Code","JetBrains Mono",Consolas,"Liberation Mono",monospace;
+    --sans:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,"Apple Color Emoji","Segoe UI Emoji",sans-serif;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    margin:0;background:var(--bg);color:var(--text);font-family:var(--sans);
+    line-height:1.65;font-size:16px;-webkit-font-smoothing:antialiased;
+    background-image:radial-gradient(1200px 600px at 80% -10%,rgba(255,255,255,.05),transparent 60%),
+                     radial-gradient(900px 500px at -10% 10%,rgba(255,255,255,.03),transparent 55%);
+    background-attachment:fixed;
+  }
+  a{color:var(--text);text-decoration:none}
+  a:hover{color:#fff}
+  ::selection{background:#2b2b31;color:#fff}
+
+  /* nav */
+  header.nav{
+    position:sticky;top:0;z-index:50;
+    backdrop-filter:blur(10px);background:rgba(10,10,11,.72);
+    border-bottom:1px solid var(--line-soft);
+  }
+  .nav-inner{max-width:1080px;margin:0 auto;padding:14px 24px;display:flex;align-items:center;gap:24px}
+  .brand{font-weight:700;letter-spacing:.2px;font-size:15px;display:flex;align-items:center;gap:10px}
+  .brand .dot{width:9px;height:9px;border-radius:50%;background:#fff;box-shadow:0 0 14px rgba(255,255,255,.7)}
+  .nav-links{margin-left:auto;display:flex;gap:22px;flex-wrap:wrap}
+  .nav-links a{color:var(--muted);font-size:14px}
+  .nav-links a:hover{color:#fff}
+  .nav-cta{border:1px solid var(--line);padding:7px 14px;border-radius:999px;color:var(--text)!important;font-size:13px}
+  .nav-cta:hover{background:#fff;color:#000!important;border-color:#fff}
+
+  main{max-width:1080px;margin:0 auto;padding:0 24px}
+
+  /* hero */
+  .hero{padding:96px 0 64px;border-bottom:1px solid var(--line-soft)}
+  .eyebrow{font-family:var(--mono);font-size:12.5px;letter-spacing:2.5px;text-transform:uppercase;color:var(--faint);margin-bottom:22px}
+  .hero h1{font-size:clamp(40px,7vw,76px);line-height:1.02;margin:0 0 20px;letter-spacing:-1.5px;font-weight:800}
+  .hero h1 .thin{color:var(--muted);font-weight:300}
+  .lede{font-size:clamp(17px,2.4vw,21px);color:var(--muted);max-width:720px;margin:0 0 34px}
+  .hero-btns{display:flex;gap:12px;flex-wrap:wrap}
+  .btn{display:inline-flex;align-items:center;gap:9px;padding:12px 20px;border-radius:999px;font-size:14.5px;font-weight:600;border:1px solid var(--line);transition:.18s}
+  .btn.primary{background:#fff;color:#000;border-color:#fff}
+  .btn.primary:hover{transform:translateY(-1px);box-shadow:0 8px 28px rgba(255,255,255,.14)}
+  .btn.ghost:hover{background:var(--panel);border-color:#3a3a42;color:#fff}
+
+  /* stat row */
+  .stats{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;margin-top:56px;background:var(--line-soft);border:1px solid var(--line-soft);border-radius:var(--radius);overflow:hidden}
+  .stat{background:var(--panel);padding:22px 20px}
+  .stat .n{font-size:30px;font-weight:800;letter-spacing:-.5px}
+  .stat .l{color:var(--faint);font-size:12.5px;margin-top:4px;font-family:var(--mono)}
+
+  /* sections */
+  section{padding:76px 0;border-bottom:1px solid var(--line-soft)}
+  .sec-head{display:flex;align-items:baseline;gap:16px;margin-bottom:10px}
+  .sec-num{font-family:var(--mono);color:var(--faint);font-size:14px}
+  h2{font-size:clamp(26px,4vw,38px);margin:0;letter-spacing:-.7px;font-weight:750}
+  .sec-sub{color:var(--muted);max-width:760px;margin:14px 0 40px;font-size:17px}
+  h3{font-size:19px;margin:0 0 8px;letter-spacing:-.2px}
+
+  .grid{display:grid;gap:18px}
+  .cols-2{grid-template-columns:1fr 1fr}
+  .cols-3{grid-template-columns:repeat(3,1fr)}
+  .card{background:var(--panel);border:1px solid var(--line-soft);border-radius:var(--radius);padding:24px;transition:.18s}
+  .card:hover{border-color:var(--line);transform:translateY(-2px)}
+  .card .tag{font-family:var(--mono);font-size:11.5px;color:var(--faint);letter-spacing:1px;text-transform:uppercase}
+  .card p{color:var(--muted);margin:10px 0 0;font-size:15px}
+  .card code,.prose code,td code,li code{font-family:var(--mono);font-size:.88em;background:#1d1d22;border:1px solid var(--line-soft);padding:1px 6px;border-radius:6px;color:#dedee2}
+
+  .prose p{color:var(--muted);max-width:780px}
+  .prose strong{color:var(--text)}
+
+  /* pipeline diagram */
+  .pipe{margin-top:8px;border:1px solid var(--line-soft);background:linear-gradient(180deg,var(--panel),#0f0f12);border-radius:var(--radius);padding:34px 24px}
+  .pipe-row{display:flex;align-items:center;justify-content:center;gap:16px;flex-wrap:wrap}
+  .node{background:var(--panel-2);border:1px solid var(--line);border-radius:12px;padding:14px 18px;text-align:center;min-width:150px}
+  .node .t{font-weight:700;font-size:14.5px}
+  .node .s{color:var(--faint);font-size:12px;font-family:var(--mono);margin-top:3px}
+  .node.hl{border-color:#4a4a54;background:#1b1b20;box-shadow:0 0 0 1px rgba(255,255,255,.04) inset}
+  .fan{display:grid;grid-template-columns:repeat(3,minmax(140px,1fr));gap:14px;width:100%;max-width:720px}
+  .arrow{color:var(--faint);font-size:22px;line-height:1;user-select:none}
+  .arrow.v{transform:rotate(90deg);margin:4px 0}
+  .pipe-cap{text-align:center;color:var(--faint);font-family:var(--mono);font-size:12px;margin-top:22px}
+
+  /* tables */
+  .table-wrap{overflow-x:auto;border:1px solid var(--line-soft);border-radius:var(--radius);background:var(--panel)}
+  table{border-collapse:collapse;width:100%;font-size:14px;min-width:560px}
+  caption{text-align:left;color:var(--faint);font-family:var(--mono);font-size:12px;padding:14px 18px 0}
+  th,td{padding:12px 16px;text-align:left;border-bottom:1px solid var(--line-soft);white-space:nowrap}
+  thead th{color:var(--muted);font-weight:600;font-size:12.5px;letter-spacing:.3px;text-transform:uppercase;background:var(--panel-2)}
+  tbody tr:hover{background:#17171c}
+  tbody tr:last-child td{border-bottom:none}
+  td.num{font-family:var(--mono);text-align:right}
+  tr.row-hl td{background:#191920}
+  tr.row-hl td:first-child{box-shadow:inset 3px 0 0 #fff}
+  .delta-up{color:#cfe8cf}
+  .pill{display:inline-block;font-family:var(--mono);font-size:11px;border:1px solid var(--line);border-radius:999px;padding:2px 9px;color:var(--muted)}
+
+  ul.clean{list-style:none;padding:0;margin:16px 0 0}
+  ul.clean li{position:relative;padding:8px 0 8px 26px;color:var(--muted);border-bottom:1px solid var(--line-soft)}
+  ul.clean li:last-child{border-bottom:none}
+  ul.clean li::before{content:"";position:absolute;left:4px;top:16px;width:7px;height:7px;border:1px solid #5a5a63;border-radius:2px;transform:rotate(45deg)}
+  ul.clean li strong{color:var(--text)}
+
+  pre{background:#0d0d10;border:1px solid var(--line-soft);border-radius:12px;padding:18px;overflow-x:auto;font-family:var(--mono);font-size:13px;color:#cfcfd4;line-height:1.6}
+  pre .c{color:var(--faint)}
+  pre .k{color:#fff}
+
+  .note{display:flex;gap:14px;background:var(--panel);border:1px solid var(--line-soft);border-left:2px solid #4a4a54;border-radius:10px;padding:16px 18px;color:var(--muted);font-size:14.5px;margin-top:22px}
+
+  footer{padding:56px 0 72px;color:var(--faint)}
+  .foot-inner{display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap;align-items:center}
+  .foot-links{display:flex;gap:20px;flex-wrap:wrap}
+  .foot-links a{color:var(--muted);font-size:14px}
+  .foot-links a:hover{color:#fff}
+  .mono{font-family:var(--mono)}
+
+  @media(max-width:820px){
+    .cols-2,.cols-3{grid-template-columns:1fr}
+    .stats{grid-template-columns:repeat(2,1fr)}
+    .fan{grid-template-columns:1fr}
+    .hero{padding:72px 0 48px}
+  }
+</style>
+</head>
+<body>
+
+<header class="nav">
+  <div class="nav-inner">
+    <span class="brand"><span class="dot"></span>vulnscan</span>
+    <nav class="nav-links">
+      <a href="#overview">Overview</a>
+      <a href="#pipeline">Pipeline</a>
+      <a href="#method">How it works</a>
+      <a href="#results">Results</a>
+      <a href="#rl">Fine-tuning</a>
+      <a href="#stack">Engineering</a>
+      <a class="nav-cta" href="https://github.com/akash-maiti-a/llmvulntesting" target="_blank" rel="noopener">GitHub ↗</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+  <!-- HERO -->
+  <section class="hero" style="border-bottom:none">
+    <div class="eyebrow">Static analysis · LLM triage · measured against ground truth</div>
+    <h1>An LLM that <span class="thin">triages</span><br/>vulnerability scanner noise.</h1>
+    <p class="lede">
+      Semgrep and Pysa flag candidate security bugs; a local LLM reads each one in context and decides
+      whether it is real. Every verdict is scored against hand-built ground truth from deliberately
+      vulnerable apps, a synthetic benchmark, and real CVEs — so the gains are measured, not claimed.
+    </p>
+    <div class="hero-btns">
+      <a class="btn primary" href="#results">See the results</a>
+      <a class="btn ghost" href="#pipeline">How it works</a>
+      <a class="btn ghost" href="https://github.com/akash-maiti-a/llmvulntesting" target="_blank" rel="noopener">View source ↗</a>
+    </div>
+
+    <div class="stats">
+      <div class="stat"><div class="n">38% → 50%</div><div class="l">precision, real apps</div></div>
+      <div class="stat"><div class="n">91%</div><div class="l">true positives kept</div></div>
+      <div class="stat"><div class="n">3</div><div class="l">analysis engines</div></div>
+      <div class="stat"><div class="n">11 + CVEs</div><div class="l">benchmark targets</div></div>
+    </div>
+  </section>
+
+  <!-- OVERVIEW -->
+  <section id="overview">
+    <div class="sec-head"><span class="sec-num">01</span><h2>The problem it solves</h2></div>
+    <p class="sec-sub">
+      Static analyzers are high-recall and low-precision: they find most real bugs but bury them under false
+      alarms, so engineers stop reading the output. vulnscan keeps the analyzers' recall and adds a triage
+      layer that removes noise — then proves the trade-off on labelled code instead of trusting the model.
+    </p>
+    <div class="grid cols-3">
+      <div class="card">
+        <div class="tag">Detect</div>
+        <h3>Three analyzers</h3>
+        <p>Semgrep registry rulesets and custom taint rules for PHP and Python, plus Pysa for inter-procedural Python taint. Each finding is normalized into one <code>Finding</code> model.</p>
+      </div>
+      <div class="card">
+        <div class="tag">Triage</div>
+        <h3>A local LLM judge</h3>
+        <p>Each alert is sent on its own to a local model via Ollama, constrained to a JSON schema, and labelled <code>true_positive</code> or <code>false_positive</code> with a reasoned analysis.</p>
+      </div>
+      <div class="card">
+        <div class="tag">Measure</div>
+        <h3>Scored on ground truth</h3>
+        <p>Deliberately vulnerable apps, a 38-case synthetic benchmark, and real CVEs (vulnerable vs. patched) give a label for every region, so precision and recall are real numbers.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- PIPELINE -->
+  <section id="pipeline">
+    <div class="sec-head"><span class="sec-num">02</span><h2>The pipeline</h2></div>
+    <p class="sec-sub">
+      One command runs the whole chain: fetch pinned target sources, scan with every engine, normalize the
+      findings, triage them with the LLM, and evaluate against ground truth into a report.
+    </p>
+
+    <div class="pipe">
+      <div class="pipe-row">
+        <div class="node"><div class="t">Targets</div><div class="s">targets.yaml</div></div>
+        <span class="arrow">→</span>
+        <div class="node"><div class="t">Fetch</div><div class="s">git clone · pinned</div></div>
+      </div>
+      <div class="pipe-row"><span class="arrow v">→</span></div>
+      <div class="pipe-row">
+        <div class="fan">
+          <div class="node"><div class="t">Semgrep registry</div><div class="s">p/php · p/python</div></div>
+          <div class="node"><div class="t">Semgrep custom</div><div class="s">taint rules</div></div>
+          <div class="node"><div class="t">Pysa</div><div class="s">inter-procedural</div></div>
+        </div>
+      </div>
+      <div class="pipe-row"><span class="arrow v">→</span></div>
+      <div class="pipe-row">
+        <div class="node hl"><div class="t">Finding</div><div class="s">tool · CWE · trace · id</div></div>
+        <span class="arrow">→</span>
+        <div class="node hl"><div class="t">LLM triage</div><div class="s">Ollama · JSON schema</div></div>
+        <span class="arrow">→</span>
+        <div class="node"><div class="t">Evaluate</div><div class="s">vs. ground truth</div></div>
+        <span class="arrow">→</span>
+        <div class="node"><div class="t">Report</div><div class="s">summary.json · md</div></div>
+      </div>
+      <div class="pipe-cap">targets.yaml → fetch → scan (3 engines) → Finding → triage → evaluate → report</div>
+    </div>
+  </section>
+
+  <!-- METHOD -->
+  <section id="method">
+    <div class="sec-head"><span class="sec-num">03</span><h2>How it works</h2></div>
+    <p class="sec-sub">Six stages, each a small, testable module.</p>
+
+    <div class="grid cols-2">
+      <div class="card">
+        <div class="tag">01 · Targets</div>
+        <h3>Reproducible by construction</h3>
+        <p>Every codebase is pinned to a commit SHA in <code>targets.yaml</code>. CVE targets expand automatically into a <code>@vuln</code> and a <code>@fixed</code> variant around the fix commit, so the same tool is tested on the bug and on its patch.</p>
+      </div>
+      <div class="card">
+        <div class="tag">02 · Scanning</div>
+        <h3>Taint with traces</h3>
+        <p>Semgrep runs twice (registry + custom) with <code>--dataflow-traces</code>, so each finding carries its source → sink path; its taint is intra-procedural. Pysa follows taint <strong>across functions and files</strong> for Python, resolving library calls through pinned models.</p>
+      </div>
+      <div class="card">
+        <div class="tag">03 · Findings &amp; CWE</div>
+        <h3>One model, stable IDs</h3>
+        <p>Every engine emits the same <code>Finding</code> (tool, ruleset, CWE, file, lines, snippet, trace) with a stable <code>sha1</code> id. Tools name the same bug with different CWEs, so CWEs are grouped into families (<code>sqli</code>, <code>cmdi</code>, <code>xss</code>…) and matched by family.</p>
+      </div>
+      <div class="card">
+        <div class="tag">04 · LLM triage</div>
+        <h3>Structured, schema-bound verdicts</h3>
+        <p>Each alert goes to Ollama at <code>temperature 0</code> with a JSON-schema reply. Prompts evolved v1 → v2 → v3: v2 forces the model through <code>sink_is_real</code>, <code>attacker_reaches_sink</code>, and <code>defence_sufficient</code>; v3 makes it write the analysis <em>before</em> committing to the checks. File paths are redacted so benchmark names can't leak the answer.</p>
+      </div>
+      <div class="card">
+        <div class="tag">05 · Ground truth</div>
+        <h3>Every region has a label</h3>
+        <p>Per-target YAML marks each location <code>vulnerable: true|false</code> with a CWE and scope (<code>taint</code>, <code>other</code>, <code>client</code>). CVE truth is derived mechanically from the fix diff — the lines the patch changed are the vulnerable ones.</p>
+      </div>
+      <div class="card">
+        <div class="tag">06 · Evaluation</div>
+        <h3>Honest, fail-open scoring</h3>
+        <p>A finding hits an entry when it lands in its location and shares its CWE family. The evaluator reports recall per scope, precision, false positives on known-safe code, and triage accuracy. Timeouts and bad replies are kept, never silently dropped (fail open).</p>
+      </div>
+    </div>
+
+    <div class="note">
+      <span>⌁</span>
+      <div><strong>Fast vs. reasoning.</strong> The fast pass answers in ~2–11s per alert. A ~7× slower chain-of-thought pass is used only as a second tier on alerts the fast pass rejected — a two-tier policy that recovers recall without paying the reasoning cost on every alert.</div>
+    </div>
+  </section>
+
+  <!-- RESULTS -->
+  <section id="results">
+    <div class="sec-head"><span class="sec-num">04</span><h2>Results</h2></div>
+    <p class="sec-sub">
+      Triage consistently raises precision while keeping almost all true positives. Numbers below are from
+      <code>results/report.md</code>, model <code>qwen3:8b</code> (Q4_K_M), temperature 0.
+    </p>
+
+    <div class="table-wrap" style="margin-bottom:22px">
+      <table>
+        <caption>Real apps — DVWA, DVPWA, PyGoat · union of all tools</caption>
+        <thead><tr><th>Configuration</th><th>Alerts</th><th>True pos.</th><th>Precision</th><th>Recall (taint)</th></tr></thead>
+        <tbody>
+          <tr><td>All tools, no triage</td><td class="num">268</td><td class="num">79</td><td class="num">38%</td><td class="num">29/39 (74%)</td></tr>
+          <tr class="row-hl"><td>+ triage v3-fast</td><td class="num">171</td><td class="num">72</td><td class="num delta-up">50%</td><td class="num">27/39 (69%)</td></tr>
+          <tr><td>+ triage v2 two-tier</td><td class="num">221</td><td class="num">79</td><td class="num">44%</td><td class="num">29/39 (74%)</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="table-wrap" style="margin-bottom:22px">
+      <table>
+        <caption>Synthetic benchmark — 38 labelled cases · union of all tools</caption>
+        <thead><tr><th>Configuration</th><th>Alerts</th><th>True pos.</th><th>Precision</th><th>Recall (taint)</th></tr></thead>
+        <tbody>
+          <tr><td>All tools, no triage</td><td class="num">77</td><td class="num">46</td><td class="num">60%</td><td class="num">18/20 (90%)</td></tr>
+          <tr class="row-hl"><td>+ triage v3-fast</td><td class="num">60</td><td class="num">44</td><td class="num delta-up">73%</td><td class="num">17/20 (85%)</td></tr>
+          <tr><td>+ triage v2 two-tier</td><td class="num">66</td><td class="num">46</td><td class="num">70%</td><td class="num">18/20 (90%)</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="table-wrap">
+      <table>
+        <caption>Triage accuracy on real apps · 79 true / 131 false positives judged</caption>
+        <thead><tr><th>Triage pass</th><th>TPs kept</th><th>FPs removed</th><th>Failed</th><th>s / alert</th></tr></thead>
+        <tbody>
+          <tr><td>v1-fast</td><td class="num">75/79 (95%)</td><td class="num">38/131 (29%)</td><td class="num">0</td><td class="num">2.9</td></tr>
+          <tr><td>v2-fast</td><td class="num">70/79 (89%)</td><td class="num">55/131 (42%)</td><td class="num">3</td><td class="num">10.7</td></tr>
+          <tr class="row-hl"><td>v3-fast</td><td class="num">72/79 (91%)</td><td class="num">60/131 (46%)</td><td class="num">0</td><td class="num">10.5</td></tr>
+          <tr><td>v2 two-tier</td><td class="num">79/79 (100%)</td><td class="num">30/131 (23%)</td><td class="num">16</td><td class="num">—</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="note" style="border-left-color:#5a6a5a">
+      <span>✓</span>
+      <div><strong>Read it this way.</strong> v3-fast removes roughly a third of all alerts and lifts precision while keeping 91% of real bugs. The two-tier policy keeps <strong>every</strong> true positive (100%) and still clears about a quarter of the noise — pick the operating point by how costly a missed bug is.</div>
+    </div>
+  </section>
+
+  <!-- RL -->
+  <section id="rl">
+    <div class="sec-head"><span class="sec-num">05</span><h2>Fine-tuning the triage model</h2></div>
+    <p class="sec-sub">
+      A research track (round 3) trains a smaller, specialized triage model with reinforcement learning, so the
+      project doesn't depend on an 8B general model for inference.
+    </p>
+
+    <div class="grid cols-2">
+      <div class="card">
+        <div class="tag">Method</div>
+        <h3>GRPO on Qwen3-4B</h3>
+        <p>A 4-bit <code>Qwen3-4B</code> base with a LoRA adapter (0.81% of parameters trained) is tuned with GRPO: the model samples several verdicts per alert, and the policy is pushed toward the higher-reward ones. Runs in an isolated GPU container on an 8&nbsp;GB laptop card.</p>
+      </div>
+      <div class="card">
+        <div class="tag">Reward</div>
+        <h3>More than "right answer"</h3>
+        <p>Each reply is scored on four terms — valid JSON, correct verdict (missing a real bug penalized 4× harder than keeping noise), calibration (Brier score of its confidence), and consistency between its checks and verdict.</p>
+      </div>
+      <div class="card">
+        <div class="tag">Data</div>
+        <h3>Held out from evaluation</h3>
+        <p>955 training / 111 dev alerts are built from a <em>separate</em> set of vulnerable apps and suites, with label-leaking comments and variable names scrubbed and a whitespace-hash check that aborts on any overlap with an evaluation file.</p>
+      </div>
+      <div class="card">
+        <div class="tag">Status</div>
+        <h3>Pipeline validated</h3>
+        <p>A 10-step smoke run completed end-to-end — base model loaded, LoRA attached, all steps ran, adapter saved — and the scanner's unit suite passes 34/34. A full multi-epoch run is the next step; the fine-tuned model is not yet claimed to beat the 8B base.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- STACK -->
+  <section id="stack" style="border-bottom:none">
+    <div class="sec-head"><span class="sec-num">06</span><h2>Engineering notes</h2></div>
+    <p class="sec-sub">Choices made so the results are trustworthy and the project is easy to run.</p>
+
+    <ul class="clean">
+      <li><strong>Reproducible everything.</strong> Targets pinned to SHAs; Semgrep <code>1.95.0</code> and Pyre <code>0.9.23</code> pinned in a Docker image; verdicts cached per finding id so runs resume and repeat.</li>
+      <li><strong>No data leakage.</strong> File paths are redacted in prompts, hint comments are blanked while preserving line numbers, and training data is hash-checked against every evaluation file.</li>
+      <li><strong>Fail open.</strong> A timed-out or malformed triage reply keeps the finding rather than dropping it — the scanner never hides a bug because the model stumbled.</li>
+      <li><strong>Local &amp; private.</strong> The LLM runs on the host through Ollama; nothing is sent to a third-party API.</li>
+      <li><strong>Tested.</strong> A pytest suite covers the parsers, CVE fix-diff ground truth, CWE matching, scoring, triage, and the RL reward — 34 tests, green.</li>
+      <li><strong>One command to run it all.</strong> <code>docker compose run --rm scanner vulnscan run</code> fetches, scans, triages, and evaluates into <code>results/report.md</code>.</li>
+    </ul>
+
+    <h3 style="margin:38px 0 12px;font-size:16px;color:var(--muted);font-family:var(--mono);letter-spacing:.3px">RUN IT YOURSELF</h3>
+    <pre><span class="c"># host: Ollama with the triage model</span>
+ollama pull qwen3:8b
+ollama serve
+
+<span class="c"># scan + triage + evaluate every target</span>
+docker compose build
+docker compose run --rm scanner vulnscan <span class="k">run</span>
+<span class="c"># → results/summary.json, results/report.md</span></pre>
+  </section>
+
+</main>
+
+<footer>
+  <main style="padding:0">
+    <div class="foot-inner">
+      <div>
+        <div class="brand" style="margin-bottom:8px"><span class="dot"></span>vulnscan</div>
+        <div class="mono" style="font-size:13px;color:var(--faint)">LLM-assisted vulnerability scanning · measured, reproducible, local.</div>
+      </div>
+      <div class="foot-links">
+        <a href="https://github.com/akash-maiti-a/llmvulntesting" target="_blank" rel="noopener">Repository ↗</a>
+        <a href="https://github.com/akash-maiti-a" target="_blank" rel="noopener">GitHub profile ↗</a>
+        <a href="#overview">Back to top ↑</a>
+      </div>
+    </div>
+  </main>
+</footer>
+
+</body>
+</html>
