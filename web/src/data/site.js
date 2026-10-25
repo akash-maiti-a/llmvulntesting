@@ -165,8 +165,8 @@ export const finetuneCards = [
   },
   {
     tag: "Status",
-    title: "Round 4 — measured & training",
-    body: "The reward and dataset ideas from round 3 are now implemented and measured: the format escape-hatch is closed, JSON parsing is hardened, and the training mix is rebalanced (true-positive share 31% → 43%). A 50-step GRPO run is training on the improved setup against a fixed base-model baseline; the unit suite passes 36/36.",
+    title: "Round 4 — measured",
+    body: "The reward and dataset ideas from round 3 are now implemented and measured: the format escape-hatch is closed, JSON parsing is hardened, and the training mix is rebalanced (true-positive share 31% → 43%), with the unit suite at 36/36. A 50-step GRPO run on the improved setup reached step 22 before it was stopped to free memory on the 8 GB laptop; scoring a fine-tuned adapter against the baseline is deferred to a longer, checkpointed run.",
   },
 ];
 
@@ -195,9 +195,9 @@ export const rlBaselineTable = {
 };
 
 export const stage4Note = {
-  mark: "⏳",
-  title: "Stage-4 run in progress.",
-  body: "A 50-step GRPO run is training on the improved reward and rebalanced corpus (Qwen3-4B 4-bit + LoRA, 8 GB RTX 4060). When it finishes, the adapter is scored against the baseline above — the goal is to raise false-positive removal while holding true-positive retention near 100%.",
+  mark: "⏸",
+  title: "Fine-tuned adapter deferred.",
+  body: "A 50-step GRPO run on the improved reward and rebalanced corpus (Qwen3-4B 4-bit + LoRA, 8 GB RTX 4060) reached step 22/50 before it was stopped to free host memory; no checkpoint was written. The improvements and baseline above stand on their own — measuring a fine-tuned adapter against the baseline awaits a longer run with periodic checkpointing on a machine with more headroom.",
 };
 
 export const engineeringPoints = [
