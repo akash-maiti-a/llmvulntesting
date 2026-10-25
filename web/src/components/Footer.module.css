@@ -1,0 +1,49 @@
+.footer {
+  padding: 56px 0 72px;
+  color: var(--faint);
+  border-top: 1px solid var(--line-soft);
+}
+
+.inner {
+  display: flex;
+  justify-content: space-between;
+  gap: 24px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.brand {
+  font-weight: 700;
+  font-size: 15px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 8px;
+}
+
+.dot {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: #fff;
+  box-shadow: 0 0 14px rgba(255, 255, 255, 0.7);
+}
+
+.tag {
+  font-family: var(--mono);
+  font-size: 13px;
+  color: var(--faint);
+}
+
+.links {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+.links a {
+  color: var(--muted);
+  font-size: 14px;
+}
+.links a:hover {
+  color: #fff;
+}
