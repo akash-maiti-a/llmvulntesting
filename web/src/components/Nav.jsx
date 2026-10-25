@@ -16,7 +16,7 @@ export default function Nav() {
             </a>
           ))}
           <a className={styles.cta} href={repoUrl} target="_blank" rel="noopener">
-            GitHub ↗
+            GitHub
           </a>
         </nav>
       </div>

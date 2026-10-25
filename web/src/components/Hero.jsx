@@ -18,7 +18,7 @@ export default function Hero() {
           Semgrep and Pysa flag candidate security bugs; a local LLM reads each one in
           context and decides whether it is real. Every verdict is scored against
           hand-built ground truth from deliberately vulnerable apps, a synthetic
-          benchmark, and real CVEs — so the gains are measured, not claimed.
+          benchmark, and real CVEs.
         </p>
         <div className={styles.btns}>
           <a className={`${styles.btn} ${styles.primary}`} href="#results">
@@ -33,7 +33,7 @@ export default function Hero() {
             target="_blank"
             rel="noopener"
           >
-            View source ↗
+            View source
           </a>
         </div>
         <StatGrid />

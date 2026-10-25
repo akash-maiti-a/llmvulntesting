@@ -95,7 +95,7 @@ export const methodCards = [
   {
     tag: "05 · Ground truth",
     title: "Every region has a label",
-    body: "Per-target YAML marks each location vulnerable: true|false with a CWE and scope (taint, other, client). CVE truth is derived mechanically from the fix diff — the lines the patch changed are the vulnerable ones.",
+    body: "Per-target YAML marks each location vulnerable: true|false with a CWE and scope (taint, other, client). CVE truth is derived mechanically from the fix diff, where the lines the patch changed are the vulnerable ones.",
   },
   {
     tag: "06 · Evaluation",
@@ -107,11 +107,11 @@ export const methodCards = [
 export const methodNote = {
   mark: "⌁",
   title: "Fast vs. reasoning.",
-  body: "The fast pass answers in ~2–11s per alert. A ~7× slower chain-of-thought pass is used only as a second tier on alerts the fast pass rejected — a two-tier policy that recovers recall without paying the reasoning cost on every alert.",
+  body: "The fast pass answers in ~2–11s per alert. A ~7× slower chain-of-thought pass is used only as a second tier on alerts the fast pass rejected, a two-tier policy that recovers recall without paying the reasoning cost on every alert.",
 };
 
 export const appsTable = {
-  caption: "Real apps — DVWA, DVPWA, PyGoat · union of all tools",
+  caption: "Real apps: DVWA, DVPWA, PyGoat",
   columns: ["Configuration", "Alerts", "True pos.", "Precision", "Recall (taint)"],
   rows: [
     { cells: ["All tools, no triage", "268", "79", "38%", "29/39 (74%)"] },
@@ -121,7 +121,7 @@ export const appsTable = {
 };
 
 export const syntheticTable = {
-  caption: "Synthetic benchmark — 38 labelled cases · union of all tools",
+  caption: "Synthetic benchmark: 38 labelled cases",
   columns: ["Configuration", "Alerts", "True pos.", "Precision", "Recall (taint)"],
   rows: [
     { cells: ["All tools, no triage", "77", "46", "60%", "18/20 (90%)"] },
@@ -137,14 +137,14 @@ export const triageTable = {
     { cells: ["v1-fast", "75/79 (95%)", "38/131 (29%)", "0", "2.9"] },
     { cells: ["v2-fast", "70/79 (89%)", "55/131 (42%)", "3", "10.7"] },
     { cells: ["v3-fast", "72/79 (91%)", "60/131 (46%)", "0", "10.5"], highlight: true },
-    { cells: ["v2 two-tier", "79/79 (100%)", "30/131 (23%)", "16", "—"] },
+    { cells: ["v2 two-tier", "79/79 (100%)", "30/131 (23%)", "16", "-"] },
   ],
 };
 
 export const resultsNote = {
   mark: "✓",
   title: "Read it this way.",
-  body: "v3-fast removes roughly a third of all alerts and lifts precision while keeping 91% of real bugs. The two-tier policy keeps every true positive (100%) and still clears about a quarter of the noise — pick the operating point by how costly a missed bug is.",
+  body: "v3-fast removes roughly a third of all alerts and lifts precision while keeping 91% of real bugs. The two-tier policy keeps every true positive (100%) and still clears about a quarter of the noise.",
 };
 
 export const finetuneCards = [
@@ -156,7 +156,7 @@ export const finetuneCards = [
   {
     tag: "Reward",
     title: "More than “right answer”",
-    body: "Each reply is scored on four terms — valid JSON, correct verdict (missing a real bug penalized 4× harder than keeping noise), calibration (Brier score of its confidence), and consistency between its checks and verdict.",
+    body: "Each reply is scored on four terms: valid JSON, correct verdict (missing a real bug penalized 4× harder than keeping noise), calibration (Brier score of its confidence), and consistency between its checks and verdict.",
   },
   {
     tag: "Data",
@@ -166,7 +166,7 @@ export const finetuneCards = [
   {
     tag: "Status",
     title: "Pipeline validated",
-    body: "A 10-step smoke run completed end-to-end — base model loaded, LoRA attached, all steps ran, adapter saved — and the scanner's unit suite passes 34/34. A full multi-epoch run is the next step; the fine-tuned model is not yet claimed to beat the 8B base.",
+    body: "A 10-step smoke run completed end-to-end: base model loaded, LoRA attached, all steps ran, adapter saved, and the scanner's unit suite passes 34/34. A full multi-epoch run is the next step; the fine-tuned model is not yet claimed to beat the 8B base.",
   },
 ];
 
@@ -181,7 +181,7 @@ export const engineeringPoints = [
   },
   {
     strong: "Fail open.",
-    rest: " A timed-out or malformed triage reply keeps the finding rather than dropping it — the scanner never hides a bug because the model stumbled.",
+    rest: " A timed-out or malformed triage reply keeps the finding rather than dropping it, the scanner never hides a bug because the model stumbled.",
   },
   {
     strong: "Local & private.",
@@ -189,7 +189,7 @@ export const engineeringPoints = [
   },
   {
     strong: "Tested.",
-    rest: " A pytest suite covers the parsers, CVE fix-diff ground truth, CWE matching, scoring, triage, and the RL reward — 34 tests, green.",
+    rest: " A pytest suite covers the parsers, CVE fix-diff ground truth, CWE matching, scoring, triage, and the RL reward resulted in 34 passing tests.",
   },
   {
     strong: "One command to run it all.",

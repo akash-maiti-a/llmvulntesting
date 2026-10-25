@@ -8,7 +8,7 @@ export default function Overview() {
       id="overview"
       num="01"
       title="The problem it solves"
-      subtitle="Static analyzers are high-recall and low-precision: they find most real bugs but bury them under false alarms, so engineers stop reading the output. vulnscan keeps the analyzers' recall and adds a triage layer that removes noise — then proves the trade-off on labelled code instead of trusting the model."
+      subtitle="Static analyzers are high-recall and low-precision: they find most real bugs but bury them under false alarms, so engineers stop reading the output. Vulnscan keeps the analyzers' recall and adds a triage layer that removes noise, then proves the trade-off on labelled code instead of trusting the model."
     >
       <CardGrid cols={3}>
         {overviewCards.map((c) => (

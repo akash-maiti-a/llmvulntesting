@@ -16,10 +16,10 @@ export default function Footer() {
         </div>
         <div className={styles.links}>
           <a href={repoUrl} target="_blank" rel="noopener">
-            Repository ↗
+            Repository
           </a>
           <a href={profileUrl} target="_blank" rel="noopener">
-            GitHub profile ↗
+            GitHub profile
           </a>
           <a href="#overview">Back to top ↑</a>
         </div>
