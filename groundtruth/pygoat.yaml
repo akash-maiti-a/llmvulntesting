@@ -1,0 +1,155 @@
+# Ground truth for PyGoat at 19d17cc, scoped to introduction/. One entry per lab
+# whose code contains the flaw, located by hand; line ranges cover the handler
+# from its source to its sink. Labs whose flaw lives only in templates,
+# settings or business logic (broken access control, auth labs) are listed
+# under scope "other" or omitted when no code line carries the flaw.
+target: pygoat
+entries:
+  - id: pg-xss-lab1
+    cwe: CWE-79
+    vulnerable: true
+    scope: taint
+    locations: [{file: introduction/views.py, lines: [93, 101]}]
+    note: q is rendered with |safe in Lab/XSS/xss_lab.html
+
+  - id: pg-xss-lab2
+    cwe: CWE-79
+    vulnerable: true
+    scope: taint
+    locations: [{file: introduction/views.py, lines: [106, 118]}]
+    note: only <script> tags are stripped; template renders username|safe
+
+  - id: pg-xss-lab3
+    cwe: CWE-79
+    vulnerable: true
+    scope: taint
+    locations: [{file: introduction/views.py, lines: [122, 133]}]
+    note: alphanumerics removed, value placed in a script context (JSFuck payloads)
+
+  - id: pg-sqli-lab
+    cwe: CWE-89
+    vulnerable: true
+    scope: taint
+    locations: [{file: introduction/views.py, lines: [147, 165]}]
+    note: raw() on a concatenated query
+
+  - id: pg-deser-pickle
+    cwe: CWE-502
+    vulnerable: true
+    scope: taint
+    locations: [{file: introduction/views.py, lines: [205, 216]}]
+    note: pickle.loads of the token cookie
+
+  - id: pg-xxe
+    cwe: CWE-611
+    vulnerable: true
+    scope: taint
+    locations: [{file: introduction/views.py, lines: [256, 262]}]
+    note: parser with external general entities enabled parses the request body
+
+  - id: pg-auth-render-escaped
+    cwe: CWE-79
+    vulnerable: false
+    scope: taint
+    locations: [{file: introduction/views.py, lines: [279, 330]}]
+    note: render_to_string autoescapes; AUTH templates use no |safe
+
+  - id: pg-cmdi-lab
+    cwe: CWE-78
+    vulnerable: true
+    scope: taint
+    locations: [{file: introduction/views.py, lines: [415, 436]}]
+    note: domain formatted into a shell=True command
+
+  - id: pg-eval-lab2
+    cwe: CWE-95
+    vulnerable: true
+    scope: taint
+    locations: [{file: introduction/views.py, lines: [453, 462]}]
+    note: eval of a POST field
+
+  - id: pg-deser-yaml
+    cwe: CWE-502
+    vulnerable: true
+    scope: taint
+    locations: [{file: introduction/views.py, lines: [551, 562]}]
+    note: yaml.load with yaml.Loader on an uploaded file
+
+  - id: pg-eval-imagemath
+    cwe: CWE-95
+    vulnerable: true
+    scope: taint
+    locations: [{file: introduction/views.py, lines: [574, 590]}]
+    note: PIL ImageMath.eval of a POST field
+
+  - id: pg-sqli-injection-lab
+    cwe: CWE-89
+    vulnerable: true
+    scope: taint
+    locations: [{file: introduction/views.py, lines: [855, 880]}]
+    note: raw() on a concatenated query
+
+  - id: pg-path-ssrf-lab
+    cwe: CWE-22
+    vulnerable: true
+    scope: taint
+    locations: [{file: introduction/views.py, lines: [918, 930]}]
+    note: POSTed file name joined to the app directory and opened
+
+  - id: pg-ssrf-lab2
+    cwe: CWE-918
+    vulnerable: true
+    scope: taint
+    locations: [{file: introduction/views.py, lines: [956, 965]}]
+    note: requests.get on a POSTed URL
+
+  - id: pg-ssti
+    cwe: CWE-1336
+    vulnerable: true
+    scope: taint
+    locations: [{file: introduction/views.py, lines: [975, 1007]}]
+    note: user text written into a Django template file that is then rendered
+
+  - id: pg-md5-crypto-lab
+    cwe: CWE-327
+    vulnerable: true
+    scope: other
+    locations: [{file: introduction/views.py, lines: [1018, 1028]}]
+    note: passwords compared as unsalted MD5
+
+  - id: pg-md5-mitre-csrf
+    cwe: CWE-327
+    vulnerable: true
+    scope: other
+    locations: [{file: introduction/mitre.py, lines: [155, 175]}]
+    note: unsalted MD5 password hashing
+
+  - id: pg-hardcoded-jwt
+    cwe: CWE-798
+    vulnerable: true
+    scope: other
+    locations: [{file: introduction/mitre.py, lines: [155, 208]}]
+    note: JWTs signed with a hard-coded secret
+
+  - id: pg-csrf-transfer
+    cwe: CWE-352
+    vulnerable: true
+    scope: other
+    locations: [{file: introduction/mitre.py, lines: [177, 208]}]
+    note: money transfer handlers are csrf_exempt
+
+  - id: pg-eval-mitre25
+    cwe: CWE-95
+    vulnerable: true
+    scope: taint
+    locations: [{file: introduction/mitre.py, lines: [214, 219]}]
+    note: eval of a POST field
+
+  - id: pg-cmdi-mitre17
+    cwe: CWE-78
+    vulnerable: true
+    scope: taint
+    locations:
+      - {file: introduction/mitre.py, lines: [232, 234]}
+      - {file: introduction/mitre.py, lines: [237, 245]}
+    note: POSTed ip concatenated into "nmap " and run by command_out() with shell=True (cross-function)

@@ -1,0 +1,66 @@
+# Ground truth for DVPWA at a1d8f89. Vulnerabilities from the project README
+# ("Vulnerabilities" section), located by hand. Negatives are queries that
+# are correctly parameterized.
+target: dvpwa
+entries:
+  - id: dvpwa-sqli-student-create
+    cwe: CWE-89
+    vulnerable: true
+    scope: taint
+    locations:
+      - {file: sqli/dao/student.py, lines: [41, 45]}
+      - {file: sqli/views.py, lines: [52, 58]}
+    note: Student.create formats the name into the INSERT with %; the name comes from request.post() in views.students
+
+  - id: dvpwa-xss-autoescape-off
+    cwe: CWE-79
+    vulnerable: true
+    scope: taint
+    locations:
+      - {file: sqli/app.py, lines: [33, 35]}
+    note: Jinja2 set up with autoescape=False, so stored review text and names render as HTML
+
+  - id: dvpwa-md5-passwords
+    cwe: CWE-916
+    vulnerable: true
+    scope: other
+    locations:
+      - {file: sqli/dao/user.py, lines: [38, 41]}
+    note: passwords stored as unsalted MD5 ("Bad choice for storing passwords")
+
+  - id: dvpwa-session-fixation
+    cwe: CWE-384
+    vulnerable: true
+    scope: other
+    locations:
+      - {file: sqli/views.py, lines: [36, 48]}
+    note: session id is not rotated when user_id is set at login
+
+  - id: dvpwa-parameterized-student
+    cwe: CWE-89
+    vulnerable: false
+    scope: taint
+    locations:
+      - {file: sqli/dao/student.py, lines: [1, 37]}
+    note: get/get_many pass values as query parameters
+
+  - id: dvpwa-parameterized-course
+    cwe: CWE-89
+    vulnerable: false
+    scope: taint
+    locations: [{file: sqli/dao/course.py}]
+    note: all queries parameterized
+
+  - id: dvpwa-parameterized-mark
+    cwe: CWE-89
+    vulnerable: false
+    scope: taint
+    locations: [{file: sqli/dao/mark.py}]
+    note: all queries parameterized
+
+  - id: dvpwa-parameterized-review
+    cwe: CWE-89
+    vulnerable: false
+    scope: taint
+    locations: [{file: sqli/dao/review.py}]
+    note: all queries parameterized

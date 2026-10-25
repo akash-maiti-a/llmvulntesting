@@ -1,0 +1,42 @@
+Compose can now delegate builds to bake for better performance.
+ To do so, set COMPOSE_BAKE=true.
+#0 building with "desktop-linux" instance using docker driver
+
+#1 [trainer internal] load build definition from train.Dockerfile
+#1 transferring dockerfile: 735B 0.0s done
+#1 DONE 0.0s
+
+#2 [trainer internal] load metadata for docker.io/pytorch/pytorch:2.7.1-cuda12.6-cudnn9-devel
+#2 DONE 0.7s
+
+#3 [trainer internal] load .dockerignore
+#3 transferring context: 102B done
+#3 DONE 0.0s
+
+#4 [trainer 1/4] FROM docker.io/pytorch/pytorch:2.7.1-cuda12.6-cudnn9-devel@sha256:639b8229ccfd8a3aa803cf49c33d6d6fe406750d79aaf723fe8c0eb1060d8cff
+#4 resolve docker.io/pytorch/pytorch:2.7.1-cuda12.6-cudnn9-devel@sha256:639b8229ccfd8a3aa803cf49c33d6d6fe406750d79aaf723fe8c0eb1060d8cff 0.0s done
+#4 DONE 0.0s
+
+#5 [trainer 2/4] RUN apt-get update  && apt-get install -y --no-install-recommends git build-essential cmake curl libcurl4-openssl-dev  && rm -rf /var/lib/apt/lists/*
+#5 CACHED
+
+#6 [trainer 3/4] RUN pip install --no-cache-dir unsloth pyyaml httpx
+#6 CACHED
+
+#7 [trainer 4/4] WORKDIR /work
+#7 CACHED
+
+#8 [trainer] exporting to image
+#8 exporting layers done
+#8 exporting manifest sha256:86956b6d0ceb5f83a2f1b299a63c6597b02f9934fbf059f09df5c7c13372d028 done
+#8 exporting config sha256:af86b1dd9b0568523b613ba1b4ce68e4b8e973a199cad1b639faa43c6f051f57 done
+#8 exporting attestation manifest sha256:349aa3f76dd4cb6603d669c7b784b82f15b4f1fe75b76673d5ca05ecfc25f762 0.0s done
+#8 exporting manifest list sha256:0430f4be5808388e410cb6e8478fc22273aa5024d0b4b852414dc221e0e33630 0.0s done
+#8 naming to docker.io/library/llmvulntesting-trainer:latest
+#8 naming to docker.io/library/llmvulntesting-trainer:latest done
+#8 unpacking to docker.io/library/llmvulntesting-trainer:latest 0.0s done
+#8 DONE 0.1s
+
+#9 [trainer] resolving provenance for metadata file
+#9 DONE 0.0s
+ trainer  Built

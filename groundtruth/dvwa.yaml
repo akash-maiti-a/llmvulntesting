@@ -1,0 +1,462 @@
+# Ground truth for DVWA, generated from its design: in every module the low,
+# medium and high levels are intentionally vulnerable and `impossible` is the
+# secure reference. scope: taint = classes a taint analyzer can see,
+# other = server-side but not a source->sink flow, client = browser-side.
+target: dvwa
+entries:
+  - id: dvwa-sqli-low
+    cwe: CWE-89
+    vulnerable: true
+    scope: taint
+    locations: [{file: vulnerabilities/sqli/source/low.php}]
+    note: SQL injection
+  - id: dvwa-sqli-medium
+    cwe: CWE-89
+    vulnerable: true
+    scope: taint
+    locations: [{file: vulnerabilities/sqli/source/medium.php}]
+    note: SQL injection
+  - id: dvwa-sqli-high
+    cwe: CWE-89
+    vulnerable: true
+    scope: taint
+    locations: [{file: vulnerabilities/sqli/source/high.php}]
+    note: SQL injection
+  - id: dvwa-sqli-impossible
+    cwe: CWE-89
+    vulnerable: false
+    scope: taint
+    locations: [{file: vulnerabilities/sqli/source/impossible.php}]
+    note: SQL injection (secure reference)
+  - id: dvwa-sqli_blind-low
+    cwe: CWE-89
+    vulnerable: true
+    scope: taint
+    locations: [{file: vulnerabilities/sqli_blind/source/low.php}]
+    note: blind SQL injection
+  - id: dvwa-sqli_blind-medium
+    cwe: CWE-89
+    vulnerable: true
+    scope: taint
+    locations: [{file: vulnerabilities/sqli_blind/source/medium.php}]
+    note: blind SQL injection
+  - id: dvwa-sqli_blind-high
+    cwe: CWE-89
+    vulnerable: true
+    scope: taint
+    locations: [{file: vulnerabilities/sqli_blind/source/high.php}]
+    note: blind SQL injection
+  - id: dvwa-sqli_blind-impossible
+    cwe: CWE-89
+    vulnerable: false
+    scope: taint
+    locations: [{file: vulnerabilities/sqli_blind/source/impossible.php}]
+    note: blind SQL injection (secure reference)
+  - id: dvwa-exec-low
+    cwe: CWE-78
+    vulnerable: true
+    scope: taint
+    locations: [{file: vulnerabilities/exec/source/low.php}]
+    note: command injection
+  - id: dvwa-exec-medium
+    cwe: CWE-78
+    vulnerable: true
+    scope: taint
+    locations: [{file: vulnerabilities/exec/source/medium.php}]
+    note: command injection
+  - id: dvwa-exec-high
+    cwe: CWE-78
+    vulnerable: true
+    scope: taint
+    locations: [{file: vulnerabilities/exec/source/high.php}]
+    note: command injection
+  - id: dvwa-exec-impossible
+    cwe: CWE-78
+    vulnerable: false
+    scope: taint
+    locations: [{file: vulnerabilities/exec/source/impossible.php}]
+    note: command injection (secure reference)
+  - id: dvwa-xss_r-low
+    cwe: CWE-79
+    vulnerable: true
+    scope: taint
+    locations: [{file: vulnerabilities/xss_r/source/low.php}]
+    note: reflected XSS
+  - id: dvwa-xss_r-medium
+    cwe: CWE-79
+    vulnerable: true
+    scope: taint
+    locations: [{file: vulnerabilities/xss_r/source/medium.php}]
+    note: reflected XSS
+  - id: dvwa-xss_r-high
+    cwe: CWE-79
+    vulnerable: true
+    scope: taint
+    locations: [{file: vulnerabilities/xss_r/source/high.php}]
+    note: reflected XSS
+  - id: dvwa-xss_r-impossible
+    cwe: CWE-79
+    vulnerable: false
+    scope: taint
+    locations: [{file: vulnerabilities/xss_r/source/impossible.php}]
+    note: reflected XSS (secure reference)
+  - id: dvwa-xss_s-low
+    cwe: CWE-79
+    vulnerable: true
+    scope: taint
+    locations: [{file: vulnerabilities/xss_s/source/low.php}]
+    note: stored XSS (stored here, rendered by dvwaGuestbook())
+  - id: dvwa-xss_s-medium
+    cwe: CWE-79
+    vulnerable: true
+    scope: taint
+    locations: [{file: vulnerabilities/xss_s/source/medium.php}]
+    note: stored XSS (stored here, rendered by dvwaGuestbook())
+  - id: dvwa-xss_s-high
+    cwe: CWE-79
+    vulnerable: true
+    scope: taint
+    locations: [{file: vulnerabilities/xss_s/source/high.php}]
+    note: stored XSS (stored here, rendered by dvwaGuestbook())
+  - id: dvwa-xss_s-impossible
+    cwe: CWE-79
+    vulnerable: false
+    scope: taint
+    locations: [{file: vulnerabilities/xss_s/source/impossible.php}]
+    note: stored XSS (stored here, rendered by dvwaGuestbook()) (secure reference)
+  - id: dvwa-fi-low
+    cwe: CWE-98
+    vulnerable: true
+    scope: taint
+    locations: [{file: vulnerabilities/fi/source/low.php}]
+    note: file inclusion (source sets $file; include() is in fi/index.php)
+  - id: dvwa-fi-medium
+    cwe: CWE-98
+    vulnerable: true
+    scope: taint
+    locations: [{file: vulnerabilities/fi/source/medium.php}]
+    note: file inclusion (source sets $file; include() is in fi/index.php)
+  - id: dvwa-fi-high
+    cwe: CWE-98
+    vulnerable: true
+    scope: taint
+    locations: [{file: vulnerabilities/fi/source/high.php}]
+    note: file inclusion (source sets $file; include() is in fi/index.php)
+  - id: dvwa-fi-impossible
+    cwe: CWE-98
+    vulnerable: false
+    scope: taint
+    locations: [{file: vulnerabilities/fi/source/impossible.php}]
+    note: file inclusion (source sets $file; include() is in fi/index.php) (secure reference)
+  - id: dvwa-open_redirect-low
+    cwe: CWE-601
+    vulnerable: true
+    scope: taint
+    locations: [{file: vulnerabilities/open_redirect/source/low.php}]
+    note: open redirect
+  - id: dvwa-open_redirect-medium
+    cwe: CWE-601
+    vulnerable: true
+    scope: taint
+    locations: [{file: vulnerabilities/open_redirect/source/medium.php}]
+    note: open redirect
+  - id: dvwa-open_redirect-high
+    cwe: CWE-601
+    vulnerable: true
+    scope: taint
+    locations: [{file: vulnerabilities/open_redirect/source/high.php}]
+    note: open redirect
+  - id: dvwa-open_redirect-impossible
+    cwe: CWE-601
+    vulnerable: false
+    scope: taint
+    locations: [{file: vulnerabilities/open_redirect/source/impossible.php}]
+    note: open redirect (secure reference)
+  - id: dvwa-upload-low
+    cwe: CWE-434
+    vulnerable: true
+    scope: other
+    locations: [{file: vulnerabilities/upload/source/low.php}]
+    note: unrestricted file upload
+  - id: dvwa-upload-medium
+    cwe: CWE-434
+    vulnerable: true
+    scope: other
+    locations: [{file: vulnerabilities/upload/source/medium.php}]
+    note: unrestricted file upload
+  - id: dvwa-upload-high
+    cwe: CWE-434
+    vulnerable: true
+    scope: other
+    locations: [{file: vulnerabilities/upload/source/high.php}]
+    note: unrestricted file upload
+  - id: dvwa-upload-impossible
+    cwe: CWE-434
+    vulnerable: false
+    scope: other
+    locations: [{file: vulnerabilities/upload/source/impossible.php}]
+    note: unrestricted file upload (secure reference)
+  - id: dvwa-csrf-low
+    cwe: CWE-352
+    vulnerable: true
+    scope: other
+    locations: [{file: vulnerabilities/csrf/source/low.php}]
+    note: CSRF on password change
+  - id: dvwa-csrf-medium
+    cwe: CWE-352
+    vulnerable: true
+    scope: other
+    locations: [{file: vulnerabilities/csrf/source/medium.php}]
+    note: CSRF on password change
+  - id: dvwa-csrf-high
+    cwe: CWE-352
+    vulnerable: true
+    scope: other
+    locations: [{file: vulnerabilities/csrf/source/high.php}]
+    note: CSRF on password change
+  - id: dvwa-csrf-impossible
+    cwe: CWE-352
+    vulnerable: false
+    scope: other
+    locations: [{file: vulnerabilities/csrf/source/impossible.php}]
+    note: CSRF on password change (secure reference)
+  - id: dvwa-brute-low
+    cwe: CWE-307
+    vulnerable: true
+    scope: other
+    locations: [{file: vulnerabilities/brute/source/low.php}]
+    note: no brute-force protection
+  - id: dvwa-brute-medium
+    cwe: CWE-307
+    vulnerable: true
+    scope: other
+    locations: [{file: vulnerabilities/brute/source/medium.php}]
+    note: no brute-force protection
+  - id: dvwa-brute-high
+    cwe: CWE-307
+    vulnerable: true
+    scope: other
+    locations: [{file: vulnerabilities/brute/source/high.php}]
+    note: no brute-force protection
+  - id: dvwa-brute-impossible
+    cwe: CWE-307
+    vulnerable: false
+    scope: other
+    locations: [{file: vulnerabilities/brute/source/impossible.php}]
+    note: no brute-force protection (secure reference)
+  - id: dvwa-captcha-low
+    cwe: CWE-287
+    vulnerable: true
+    scope: other
+    locations: [{file: vulnerabilities/captcha/source/low.php}]
+    note: bypassable CAPTCHA step
+  - id: dvwa-captcha-medium
+    cwe: CWE-287
+    vulnerable: true
+    scope: other
+    locations: [{file: vulnerabilities/captcha/source/medium.php}]
+    note: bypassable CAPTCHA step
+  - id: dvwa-captcha-high
+    cwe: CWE-287
+    vulnerable: true
+    scope: other
+    locations: [{file: vulnerabilities/captcha/source/high.php}]
+    note: bypassable CAPTCHA step
+  - id: dvwa-captcha-impossible
+    cwe: CWE-287
+    vulnerable: false
+    scope: other
+    locations: [{file: vulnerabilities/captcha/source/impossible.php}]
+    note: bypassable CAPTCHA step (secure reference)
+  - id: dvwa-weak_id-low
+    cwe: CWE-330
+    vulnerable: true
+    scope: other
+    locations: [{file: vulnerabilities/weak_id/source/low.php}]
+    note: predictable session IDs
+  - id: dvwa-weak_id-medium
+    cwe: CWE-330
+    vulnerable: true
+    scope: other
+    locations: [{file: vulnerabilities/weak_id/source/medium.php}]
+    note: predictable session IDs
+  - id: dvwa-weak_id-high
+    cwe: CWE-330
+    vulnerable: true
+    scope: other
+    locations: [{file: vulnerabilities/weak_id/source/high.php}]
+    note: predictable session IDs
+  - id: dvwa-weak_id-impossible
+    cwe: CWE-330
+    vulnerable: false
+    scope: other
+    locations: [{file: vulnerabilities/weak_id/source/impossible.php}]
+    note: predictable session IDs (secure reference)
+  - id: dvwa-cryptography-low
+    cwe: CWE-327
+    vulnerable: true
+    scope: other
+    locations: [{file: vulnerabilities/cryptography/source/low.php}]
+    note: weak or misused cryptography
+  - id: dvwa-cryptography-medium
+    cwe: CWE-327
+    vulnerable: true
+    scope: other
+    locations: [{file: vulnerabilities/cryptography/source/medium.php}]
+    note: weak or misused cryptography
+  - id: dvwa-cryptography-high
+    cwe: CWE-327
+    vulnerable: true
+    scope: other
+    locations: [{file: vulnerabilities/cryptography/source/high.php}]
+    note: weak or misused cryptography
+  - id: dvwa-cryptography-impossible
+    cwe: CWE-327
+    vulnerable: false
+    scope: other
+    locations: [{file: vulnerabilities/cryptography/source/impossible.php}]
+    note: weak or misused cryptography (secure reference)
+  - id: dvwa-authbypass-low
+    cwe: CWE-285
+    vulnerable: true
+    scope: other
+    locations: [{file: vulnerabilities/authbypass/source/low.php}]
+    note: missing authorization check
+  - id: dvwa-authbypass-medium
+    cwe: CWE-285
+    vulnerable: true
+    scope: other
+    locations: [{file: vulnerabilities/authbypass/source/medium.php}]
+    note: missing authorization check
+  - id: dvwa-authbypass-high
+    cwe: CWE-285
+    vulnerable: true
+    scope: other
+    locations: [{file: vulnerabilities/authbypass/source/high.php}]
+    note: missing authorization check
+  - id: dvwa-authbypass-impossible
+    cwe: CWE-285
+    vulnerable: false
+    scope: other
+    locations: [{file: vulnerabilities/authbypass/source/impossible.php}]
+    note: missing authorization check (secure reference)
+  - id: dvwa-bac-low
+    cwe: CWE-639
+    vulnerable: true
+    scope: other
+    locations: [{file: vulnerabilities/bac/source/low.php}]
+    note: broken access control (IDOR)
+  - id: dvwa-bac-medium
+    cwe: CWE-639
+    vulnerable: true
+    scope: other
+    locations: [{file: vulnerabilities/bac/source/medium.php}]
+    note: broken access control (IDOR)
+  - id: dvwa-bac-high
+    cwe: CWE-639
+    vulnerable: true
+    scope: other
+    locations: [{file: vulnerabilities/bac/source/high.php}]
+    note: broken access control (IDOR)
+  - id: dvwa-bac-impossible
+    cwe: CWE-639
+    vulnerable: false
+    scope: other
+    locations: [{file: vulnerabilities/bac/source/impossible.php}]
+    note: broken access control (IDOR) (secure reference)
+  - id: dvwa-api-low
+    cwe: CWE-639
+    vulnerable: true
+    scope: other
+    locations: [{file: vulnerabilities/api/source/low.php}]
+    note: API object-level authorization
+  - id: dvwa-api-medium
+    cwe: CWE-639
+    vulnerable: true
+    scope: other
+    locations: [{file: vulnerabilities/api/source/medium.php}]
+    note: API object-level authorization
+  - id: dvwa-api-high
+    cwe: CWE-639
+    vulnerable: true
+    scope: other
+    locations: [{file: vulnerabilities/api/source/high.php}]
+    note: API object-level authorization
+  - id: dvwa-api-impossible
+    cwe: CWE-639
+    vulnerable: false
+    scope: other
+    locations: [{file: vulnerabilities/api/source/impossible.php}]
+    note: API object-level authorization (secure reference)
+  - id: dvwa-xss_d-low
+    cwe: CWE-79
+    vulnerable: true
+    scope: client
+    locations: [{file: vulnerabilities/xss_d/source/low.php}]
+    note: DOM XSS (client-side JavaScript)
+  - id: dvwa-xss_d-medium
+    cwe: CWE-79
+    vulnerable: true
+    scope: client
+    locations: [{file: vulnerabilities/xss_d/source/medium.php}]
+    note: DOM XSS (client-side JavaScript)
+  - id: dvwa-xss_d-high
+    cwe: CWE-79
+    vulnerable: true
+    scope: client
+    locations: [{file: vulnerabilities/xss_d/source/high.php}]
+    note: DOM XSS (client-side JavaScript)
+  - id: dvwa-xss_d-impossible
+    cwe: CWE-79
+    vulnerable: false
+    scope: client
+    locations: [{file: vulnerabilities/xss_d/source/impossible.php}]
+    note: DOM XSS (client-side JavaScript) (secure reference)
+  - id: dvwa-csp-low
+    cwe: CWE-693
+    vulnerable: true
+    scope: client
+    locations: [{file: vulnerabilities/csp/source/low.php}]
+    note: CSP bypass
+  - id: dvwa-csp-medium
+    cwe: CWE-693
+    vulnerable: true
+    scope: client
+    locations: [{file: vulnerabilities/csp/source/medium.php}]
+    note: CSP bypass
+  - id: dvwa-csp-high
+    cwe: CWE-693
+    vulnerable: true
+    scope: client
+    locations: [{file: vulnerabilities/csp/source/high.php}]
+    note: CSP bypass
+  - id: dvwa-csp-impossible
+    cwe: CWE-693
+    vulnerable: false
+    scope: client
+    locations: [{file: vulnerabilities/csp/source/impossible.php}]
+    note: CSP bypass (secure reference)
+  - id: dvwa-javascript-low
+    cwe: CWE-602
+    vulnerable: true
+    scope: client
+    locations: [{file: vulnerabilities/javascript/source/low.php}]
+    note: client-side security controls
+  - id: dvwa-javascript-medium
+    cwe: CWE-602
+    vulnerable: true
+    scope: client
+    locations: [{file: vulnerabilities/javascript/source/medium.php}]
+    note: client-side security controls
+  - id: dvwa-javascript-high
+    cwe: CWE-602
+    vulnerable: true
+    scope: client
+    locations: [{file: vulnerabilities/javascript/source/high.php}]
+    note: client-side security controls
+  - id: dvwa-javascript-impossible
+    cwe: CWE-602
+    vulnerable: false
+    scope: client
+    locations: [{file: vulnerabilities/javascript/source/impossible.php}]
+    note: client-side security controls (secure reference)

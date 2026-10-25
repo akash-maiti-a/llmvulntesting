@@ -1,0 +1,232 @@
+# Ground truth for benchmarks/synthetic. Generated together with the cases;
+# every case is one file, so each entry covers the whole file.
+target: synthetic
+entries:
+  - id: syn-php-01
+    cwe: CWE-89
+    vulnerable: true
+    scope: taint
+    locations: [{file: php/case01.php}]
+    note: string-concatenated query in a quoted context
+  - id: syn-php-02
+    cwe: CWE-89
+    vulnerable: false
+    scope: taint
+    locations: [{file: php/case02.php}]
+    note: prepared statement with a bound parameter
+  - id: syn-php-03
+    cwe: CWE-89
+    vulnerable: true
+    scope: taint
+    locations: [{file: php/case03.php}]
+    note: mysqli_real_escape_string in a numeric (unquoted) context
+  - id: syn-php-04
+    cwe: CWE-89
+    vulnerable: false
+    scope: taint
+    locations: [{file: php/case04.php}]
+    note: mysqli_real_escape_string in a quoted context with utf8mb4
+  - id: syn-php-05
+    cwe: CWE-78
+    vulnerable: true
+    scope: taint
+    locations: [{file: php/case05.php}]
+    note: request value concatenated into a shell command
+  - id: syn-php-06
+    cwe: CWE-78
+    vulnerable: false
+    scope: taint
+    locations: [{file: php/case06.php}]
+    note: input validated as an IP address before use
+  - id: syn-php-07
+    cwe: CWE-78
+    vulnerable: false
+    scope: taint
+    locations: [{file: php/case07.php}]
+    note: argument quoted with escapeshellarg
+  - id: syn-php-08
+    cwe: CWE-79
+    vulnerable: true
+    scope: taint
+    locations: [{file: php/case08.php}]
+    note: request value echoed into HTML
+  - id: syn-php-09
+    cwe: CWE-79
+    vulnerable: true
+    scope: taint
+    locations: [{file: php/case09.php}]
+    note: htmlspecialchars output placed in an unquoted attribute
+  - id: syn-php-10
+    cwe: CWE-79
+    vulnerable: false
+    scope: taint
+    locations: [{file: php/case10.php}]
+    note: htmlspecialchars output in element content
+  - id: syn-php-11
+    cwe: CWE-98
+    vulnerable: true
+    scope: taint
+    locations: [{file: php/case11.php}]
+    note: request value used in include path
+  - id: syn-php-12
+    cwe: CWE-98
+    vulnerable: false
+    scope: taint
+    locations: [{file: php/case12.php}]
+    note: include restricted to an allowlist
+  - id: syn-php-13
+    cwe: CWE-89
+    vulnerable: true
+    scope: taint
+    locations: [{file: php/case13.php}]
+    note: tainted value reaches a query inside a helper function
+  - id: syn-php-14
+    cwe: CWE-502
+    vulnerable: true
+    scope: taint
+    locations: [{file: php/case14.php}]
+    note: unserialize of a cookie
+  - id: syn-php-15
+    cwe: CWE-502
+    vulnerable: false
+    scope: taint
+    locations: [{file: php/case15.php}]
+    note: json_decode of a cookie
+  - id: syn-php-16
+    cwe: CWE-601
+    vulnerable: true
+    scope: taint
+    locations: [{file: php/case16.php}]
+    note: redirect to a request-supplied URL
+  - id: syn-php-17
+    cwe: CWE-601
+    vulnerable: false
+    scope: taint
+    locations: [{file: php/case17.php}]
+    note: redirect limited to local paths
+  - id: syn-python-01
+    cwe: CWE-89
+    vulnerable: true
+    scope: taint
+    locations: [{file: python/case01.py}]
+    note: f-string SQL
+  - id: syn-python-02
+    cwe: CWE-89
+    vulnerable: false
+    scope: taint
+    locations: [{file: python/case02.py}]
+    note: parameterized SQL
+  - id: syn-python-03
+    cwe: CWE-78
+    vulnerable: true
+    scope: taint
+    locations: [{file: python/case03.py}]
+    note: shell=True with request data
+  - id: syn-python-04
+    cwe: CWE-78
+    vulnerable: false
+    scope: taint
+    locations: [{file: python/case04.py}]
+    note: validated IP passed as an argv list
+  - id: syn-python-05
+    cwe: CWE-502
+    vulnerable: true
+    scope: taint
+    locations: [{file: python/case05.py}]
+    note: pickle.loads of a cookie
+  - id: syn-python-06
+    cwe: CWE-502
+    vulnerable: false
+    scope: taint
+    locations: [{file: python/case06.py}]
+    note: json.loads of a cookie
+  - id: syn-python-07
+    cwe: CWE-502
+    vulnerable: true
+    scope: taint
+    locations: [{file: python/case07.py}]
+    note: yaml.load with the full Loader
+  - id: syn-python-08
+    cwe: CWE-502
+    vulnerable: false
+    scope: taint
+    locations: [{file: python/case08.py}]
+    note: yaml.safe_load
+  - id: syn-python-09
+    cwe: CWE-22
+    vulnerable: true
+    scope: taint
+    locations: [{file: python/case09.py}]
+    note: request filename joined to a base directory
+  - id: syn-python-10
+    cwe: CWE-22
+    vulnerable: false
+    scope: taint
+    locations: [{file: python/case10.py}]
+    note: basename + realpath containment check
+  - id: syn-python-11
+    cwe: CWE-918
+    vulnerable: true
+    scope: taint
+    locations: [{file: python/case11.py}]
+    note: server fetches a request-supplied URL
+  - id: syn-python-12
+    cwe: CWE-918
+    vulnerable: false
+    scope: taint
+    locations: [{file: python/case12.py}]
+    note: URL host checked against an allowlist
+  - id: syn-python-13
+    cwe: CWE-95
+    vulnerable: true
+    scope: taint
+    locations: [{file: python/case13.py}]
+    note: eval of form input
+  - id: syn-python-14
+    cwe: CWE-95
+    vulnerable: false
+    scope: taint
+    locations: [{file: python/case14.py}]
+    note: ast.literal_eval of form input
+  - id: syn-python-15
+    cwe: CWE-1336
+    vulnerable: true
+    scope: taint
+    locations: [{file: python/case15.py}]
+    note: request data concatenated into a template source
+  - id: syn-python-16
+    cwe: CWE-1336
+    vulnerable: false
+    scope: taint
+    locations: [{file: python/case16.py}]
+    note: request data passed as a template variable
+  - id: syn-python-17
+    cwe: CWE-78
+    vulnerable: true
+    scope: taint
+    locations: [{file: python/case17.py}]
+    note: shell command built inside a helper function
+  - id: syn-python-18
+    cwe: CWE-79
+    vulnerable: true
+    scope: taint
+    locations: [{file: python/case18.py}]
+    note: request value interpolated into an HTML response
+  - id: syn-python-19
+    cwe: CWE-79
+    vulnerable: false
+    scope: taint
+    locations: [{file: python/case19.py}]
+    note: request value HTML-escaped before interpolation
+  - id: syn-python-20
+    cwe: CWE-601
+    vulnerable: true
+    scope: taint
+    locations: [{file: python/case20.py}]
+    note: redirect to a request-supplied URL
+  - id: syn-python-21
+    cwe: CWE-601
+    vulnerable: false
+    scope: taint
+    locations: [{file: python/case21.py}]
+    note: redirect limited to local paths

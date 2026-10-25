@@ -1,0 +1,6 @@
+targets/src/
+training/
+results/
+.cache/
+.git/
+**/__pycache__/

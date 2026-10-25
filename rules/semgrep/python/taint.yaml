@@ -1,0 +1,189 @@
+# Custom Python taint rules for Django, Flask and aiohttp handlers.
+rules:
+  - id: py-taint-sqli
+    languages: [python]
+    severity: ERROR
+    message: Request data is used to build a SQL statement that is executed.
+    metadata: {cwe: ["CWE-89"], category: security}
+    mode: taint
+    pattern-sources: &py_sources
+      - pattern-either:
+          - pattern: request.GET
+          - pattern: request.POST
+          - pattern: request.COOKIES
+          - pattern: request.FILES
+          - pattern: request.body
+          - pattern: request.META
+          - pattern: request.headers
+          - pattern: request.args
+          - pattern: request.form
+          - pattern: request.values
+          - pattern: request.json
+          - pattern: request.data
+          - pattern: request.cookies
+          - pattern: request.get_json(...)
+          - pattern: request.query
+          - pattern: request.match_info
+          - pattern: request.post()
+          - pattern: request.json()
+          - pattern: request.text()
+          - pattern: input(...)
+    pattern-sanitizers:
+      - pattern-either:
+          - pattern: int(...)
+          - pattern: float(...)
+          - pattern: uuid.UUID(...)
+    pattern-sinks:
+      - patterns:
+          - pattern-either:
+              - pattern: $CUR.execute($Q, ...)
+              - pattern: $CUR.executemany($Q, ...)
+              - pattern: $CUR.executescript($Q)
+              - pattern: $M.objects.raw($Q, ...)
+              - pattern: $M.objects.extra(...)
+              - pattern: text($Q)
+          - focus-metavariable: $Q
+          - pattern-not: |
+              "..."
+
+  - id: py-taint-cmdi
+    languages: [python]
+    severity: ERROR
+    message: Request data reaches a shell command.
+    metadata: {cwe: ["CWE-78"], category: security}
+    mode: taint
+    pattern-sources: *py_sources
+    pattern-sanitizers:
+      - pattern-either:
+          - pattern: shlex.quote(...)
+          - pattern: int(...)
+    pattern-sinks:
+      - pattern-either:
+          - pattern: os.system(...)
+          - pattern: os.popen(...)
+          - pattern: subprocess.$F(..., shell=True, ...)
+          - pattern: subprocess.getoutput(...)
+          - pattern: subprocess.getstatusoutput(...)
+
+  - id: py-taint-code-injection
+    languages: [python]
+    severity: ERROR
+    message: Request data reaches eval/exec.
+    metadata: {cwe: ["CWE-95"], category: security}
+    mode: taint
+    pattern-sources: *py_sources
+    pattern-sinks:
+      - pattern-either:
+          - pattern: eval(...)
+          - pattern: exec(...)
+
+  - id: py-taint-ssti
+    languages: [python]
+    severity: ERROR
+    message: Request data is used as a template source (server-side template injection).
+    metadata: {cwe: ["CWE-1336"], category: security}
+    mode: taint
+    pattern-sources: *py_sources
+    pattern-sinks:
+      - patterns:
+          - pattern-either:
+              - pattern: render_template_string($T, ...)
+              - pattern: Template($T, ...)
+              - pattern: $ENV.from_string($T)
+          - focus-metavariable: $T
+
+  - id: py-taint-deserialization
+    languages: [python]
+    severity: ERROR
+    message: Request data is deserialized with an unsafe loader.
+    metadata: {cwe: ["CWE-502"], category: security}
+    mode: taint
+    pattern-sources: *py_sources
+    pattern-sinks:
+      - patterns:
+          - pattern-either:
+              - pattern: pickle.loads(...)
+              - pattern: pickle.load(...)
+              - pattern: marshal.loads(...)
+              - pattern: yaml.load(...)
+              - pattern: yaml.unsafe_load(...)
+              - pattern: jsonpickle.decode(...)
+          - pattern-not: yaml.load(..., Loader=yaml.SafeLoader, ...)
+          - pattern-not: yaml.load(..., Loader=SafeLoader, ...)
+
+  - id: py-taint-path-traversal
+    languages: [python]
+    severity: WARNING
+    message: Request data controls a filesystem path.
+    metadata: {cwe: ["CWE-22"], category: security}
+    mode: taint
+    pattern-sources: *py_sources
+    pattern-sanitizers:
+      - pattern-either:
+          - pattern: os.path.basename(...)
+          - pattern: secure_filename(...)
+    pattern-sinks:
+      - patterns:
+          - pattern-either:
+              - pattern: open($P, ...)
+              - pattern: os.remove($P)
+              - pattern: os.unlink($P)
+              - pattern: send_file($P, ...)
+          - focus-metavariable: $P
+
+  - id: py-taint-xss
+    languages: [python]
+    severity: WARNING
+    message: Request data is returned as HTML without escaping.
+    metadata: {cwe: ["CWE-79"], category: security}
+    mode: taint
+    pattern-sources: *py_sources
+    pattern-sanitizers:
+      - pattern-either:
+          - pattern: html.escape(...)
+          - pattern: escape(...)
+          - pattern: int(...)
+    pattern-sinks:
+      - pattern-either:
+          - pattern: HttpResponse(...)
+          - pattern: mark_safe(...)
+          - pattern: Markup(...)
+          - pattern: make_response(...)
+
+  - id: py-taint-open-redirect
+    languages: [python]
+    severity: WARNING
+    message: Request data controls a redirect target.
+    metadata: {cwe: ["CWE-601"], category: security}
+    mode: taint
+    pattern-sources: *py_sources
+    pattern-sinks:
+      - pattern-either:
+          - pattern: redirect(...)
+          - pattern: HttpResponseRedirect(...)
+
+  - id: py-taint-ssrf
+    languages: [python]
+    severity: WARNING
+    message: Request data controls the URL of a server-side HTTP request.
+    metadata: {cwe: ["CWE-918"], category: security}
+    mode: taint
+    pattern-sources: *py_sources
+    pattern-sinks:
+      - patterns:
+          - pattern-either:
+              - pattern: requests.$M($U, ...)
+              - pattern: urlopen($U, ...)
+          - focus-metavariable: $U
+
+  - id: py-taint-xxe
+    languages: [python]
+    severity: ERROR
+    message: Request data is parsed as XML with entity resolution enabled.
+    metadata: {cwe: ["CWE-611"], category: security}
+    mode: taint
+    pattern-sources: *py_sources
+    pattern-sinks:
+      - pattern-either:
+          - pattern: etree.fromstring(...)
+          - pattern: parseString(...)

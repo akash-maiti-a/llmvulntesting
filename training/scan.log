@@ -1,0 +1,35 @@
+benchmarkpython semgrep-registry: 180 findings (30s)
+benchmarkpython semgrep-custom: 78 findings (18s)
+sard-php semgrep-registry: 482 findings (65s)
+sard-php semgrep-custom: 823 findings (88s)
+xvwa semgrep-registry: 33 findings (4s)
+xvwa semgrep-custom: 37 findings (4s)
+django.nv semgrep-registry: 19 findings (6s)
+django.nv semgrep-custom: 2 findings (2s)
+vulpy semgrep-registry: 15 findings (4s)
+vulpy semgrep-custom: 0 findings (1s)
+benchmarkpython pysa: 492 findings (22s)
+django.nv pysa: 38 findings (41s)
+vulpy pysa: 16 findings (12s)
+{
+  "benchmarkpython": {
+    "tp": 208,
+    "fp": 178
+  },
+  "django.nv": {
+    "tp": 6
+  },
+  "sard-php": {
+    "fp": 651
+  },
+  "vulpy": {
+    "tp": 4
+  },
+  "xvwa": {
+    "tp": 19
+  },
+  "_total": {
+    "train": 955,
+    "dev": 111
+  }
+}

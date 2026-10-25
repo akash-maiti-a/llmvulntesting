@@ -1,0 +1,68 @@
+target: django.nv
+entries:
+- id: dnv-sqli-upload
+  cwe: CWE-89
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: taskManager/views.py
+    lines:
+    - 170
+    - 205
+  note: ''
+- id: dnv-cmdi-store
+  cwe: CWE-78
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: taskManager/misc.py
+    lines:
+    - 24
+    - 42
+  note: ''
+- id: dnv-redirect-logout
+  cwe: CWE-601
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: taskManager/views.py
+    lines:
+    - 385
+    - 389
+  note: ''
+- id: dnv-authz-groups
+  cwe: CWE-862
+  vulnerable: true
+  scope: other
+  exhaustive: false
+  locations:
+  - file: taskManager/views.py
+    lines:
+    - 112
+    - 169
+  note: ''
+- id: dnv-idor-task-delete
+  cwe: CWE-639
+  vulnerable: true
+  scope: other
+  exhaustive: false
+  locations:
+  - file: taskManager/views.py
+    lines:
+    - 299
+    - 310
+  note: ''
+- id: dnv-xss-username
+  cwe: CWE-79
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: taskManager/templates/taskManager/base_backend.html
+    lines:
+    - 58
+    - 58
+  note: ''

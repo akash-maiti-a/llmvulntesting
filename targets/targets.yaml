@@ -1,0 +1,70 @@
+# Targets scanned by vulnscan. App targets are pinned with `ref`; CVE targets
+# are checked out twice: at fix_commit^ ("vuln") and at fix_commit ("fixed").
+# Ground truth for app and local targets lives in groundtruth/<name>.yaml; CVE
+# ground truth is derived from the fix diff (see groundtruth/cves.md).
+targets:
+  - name: dvwa
+    lang: php
+    repo: https://github.com/digininja/DVWA
+    ref: a1978a2fed195acd093010af6395f86a281537ca
+    scan_paths: [vulnerabilities]
+
+  - name: dvpwa
+    lang: python
+    repo: https://github.com/anxolerd/dvpwa
+    ref: a1d8f89fac2e57093189853c6527c2b01fc1d9c1
+    scan_paths: [sqli]
+    pysa_sources: [.]
+    pysa_deps: [aiohttp, multidict, yarl, aiopg, psycopg2-binary, aiohttp-jinja2, jinja2,
+                markupsafe, aiohttp-session]
+
+  - name: pygoat
+    lang: python
+    repo: https://github.com/adeyosemanputra/pygoat
+    ref: 19d17cc8874861142b330636d068bbde54e86b85
+    scan_paths: [introduction]
+    pysa_sources: [.]
+    pysa_deps: [django, asgiref, pyyaml, requests, urllib3, pillow, pyjwt]
+
+  - name: synthetic
+    lang: mixed
+    path: benchmarks/synthetic
+    pysa_sources: [python]
+    # Pyre's bundled Flask models target the werkzeug<2 API (BaseRequest), so
+    # Pyre resolves against Flask 1.1 types. Only types matter; nothing is run.
+    pysa_deps: [flask==1.1.4, werkzeug==1.0.1, jinja2==2.11.3, markupsafe==1.1.1, itsdangerous==1.1.0,
+                click==7.1.2, requests, pyyaml]
+
+  # CVE targets (see groundtruth/cves.md for selection notes).
+  - name: pheditor
+    lang: php
+    repo: https://github.com/pheditor/pheditor
+    fix_commit: 62b43df7cb8956a9b0deb9bec278ca8676c890c5
+    cve: CVE-2026-48030
+    cwe: CWE-78
+    scan_paths: [pheditor.php]
+
+  - name: yeswiki
+    lang: php
+    repo: https://github.com/YesWiki/yeswiki
+    fix_commit: 90ca54fb518e1c43a1ead6e4f5bf9f0389789841
+    cve: CVE-2026-52775
+    cwe: CWE-89
+    scan_paths: [includes/services]
+
+  - name: raspap
+    lang: php
+    repo: https://github.com/RaspAP/raspap-webgui
+    fix_commit: f514f5a12ef0c34853b5370ef55d630b499f977d
+    cve: CVE-2026-24788
+    cwe: CWE-78
+    scan_paths: [includes]
+
+  - name: wsgidav
+    lang: python
+    repo: https://github.com/mar10/wsgidav
+    fix_commit: 6f35776c9188f130ab044ce557015d51aaa83500
+    cve: CVE-2026-55509
+    cwe: CWE-89
+    scan_paths: [wsgidav/samples]
+    pysa_sources: [.]

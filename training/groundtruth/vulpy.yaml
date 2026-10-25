@@ -1,0 +1,5348 @@
+target: vulpy
+entries:
+- id: vulpy-db_init-0-89
+  cwe: CWE-89
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: db_init.py
+    lines:
+    - 5
+    - 5
+  note: changed in good/
+- id: vulpy-db_init-0-79
+  cwe: CWE-79
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: db_init.py
+    lines:
+    - 5
+    - 5
+  note: changed in good/
+- id: vulpy-db_init-0-78
+  cwe: CWE-78
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: db_init.py
+    lines:
+    - 5
+    - 5
+  note: changed in good/
+- id: vulpy-db_init-0-22
+  cwe: CWE-22
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: db_init.py
+    lines:
+    - 5
+    - 5
+  note: changed in good/
+- id: vulpy-db_init-0-94
+  cwe: CWE-94
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: db_init.py
+    lines:
+    - 5
+    - 5
+  note: changed in good/
+- id: vulpy-db_init-0-502
+  cwe: CWE-502
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: db_init.py
+    lines:
+    - 5
+    - 5
+  note: changed in good/
+- id: vulpy-db_init-0-601
+  cwe: CWE-601
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: db_init.py
+    lines:
+    - 5
+    - 5
+  note: changed in good/
+- id: vulpy-db_init-0-327
+  cwe: CWE-327
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: db_init.py
+    lines:
+    - 5
+    - 5
+  note: changed in good/
+- id: vulpy-db_init-0-918
+  cwe: CWE-918
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: db_init.py
+    lines:
+    - 5
+    - 5
+  note: changed in good/
+- id: vulpy-db_init-1-89
+  cwe: CWE-89
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: db_init.py
+    lines:
+    - 17
+    - 21
+  note: changed in good/
+- id: vulpy-db_init-1-79
+  cwe: CWE-79
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: db_init.py
+    lines:
+    - 17
+    - 21
+  note: changed in good/
+- id: vulpy-db_init-1-78
+  cwe: CWE-78
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: db_init.py
+    lines:
+    - 17
+    - 21
+  note: changed in good/
+- id: vulpy-db_init-1-22
+  cwe: CWE-22
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: db_init.py
+    lines:
+    - 17
+    - 21
+  note: changed in good/
+- id: vulpy-db_init-1-94
+  cwe: CWE-94
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: db_init.py
+    lines:
+    - 17
+    - 21
+  note: changed in good/
+- id: vulpy-db_init-1-502
+  cwe: CWE-502
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: db_init.py
+    lines:
+    - 17
+    - 21
+  note: changed in good/
+- id: vulpy-db_init-1-601
+  cwe: CWE-601
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: db_init.py
+    lines:
+    - 17
+    - 21
+  note: changed in good/
+- id: vulpy-db_init-1-327
+  cwe: CWE-327
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: db_init.py
+    lines:
+    - 17
+    - 21
+  note: changed in good/
+- id: vulpy-db_init-1-918
+  cwe: CWE-918
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: db_init.py
+    lines:
+    - 17
+    - 21
+  note: changed in good/
+- id: vulpy-libapi-2-89
+  cwe: CWE-89
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: libapi.py
+    lines:
+    - 8
+    - 8
+  note: changed in good/
+- id: vulpy-libapi-2-79
+  cwe: CWE-79
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: libapi.py
+    lines:
+    - 8
+    - 8
+  note: changed in good/
+- id: vulpy-libapi-2-78
+  cwe: CWE-78
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: libapi.py
+    lines:
+    - 8
+    - 8
+  note: changed in good/
+- id: vulpy-libapi-2-22
+  cwe: CWE-22
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: libapi.py
+    lines:
+    - 8
+    - 8
+  note: changed in good/
+- id: vulpy-libapi-2-94
+  cwe: CWE-94
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: libapi.py
+    lines:
+    - 8
+    - 8
+  note: changed in good/
+- id: vulpy-libapi-2-502
+  cwe: CWE-502
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: libapi.py
+    lines:
+    - 8
+    - 8
+  note: changed in good/
+- id: vulpy-libapi-2-601
+  cwe: CWE-601
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: libapi.py
+    lines:
+    - 8
+    - 8
+  note: changed in good/
+- id: vulpy-libapi-2-327
+  cwe: CWE-327
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: libapi.py
+    lines:
+    - 8
+    - 8
+  note: changed in good/
+- id: vulpy-libapi-2-918
+  cwe: CWE-918
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: libapi.py
+    lines:
+    - 8
+    - 8
+  note: changed in good/
+- id: vulpy-libapi-3-89
+  cwe: CWE-89
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: libapi.py
+    lines:
+    - 10
+    - 10
+  note: changed in good/
+- id: vulpy-libapi-3-79
+  cwe: CWE-79
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: libapi.py
+    lines:
+    - 10
+    - 10
+  note: changed in good/
+- id: vulpy-libapi-3-78
+  cwe: CWE-78
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: libapi.py
+    lines:
+    - 10
+    - 10
+  note: changed in good/
+- id: vulpy-libapi-3-22
+  cwe: CWE-22
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: libapi.py
+    lines:
+    - 10
+    - 10
+  note: changed in good/
+- id: vulpy-libapi-3-94
+  cwe: CWE-94
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: libapi.py
+    lines:
+    - 10
+    - 10
+  note: changed in good/
+- id: vulpy-libapi-3-502
+  cwe: CWE-502
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: libapi.py
+    lines:
+    - 10
+    - 10
+  note: changed in good/
+- id: vulpy-libapi-3-601
+  cwe: CWE-601
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: libapi.py
+    lines:
+    - 10
+    - 10
+  note: changed in good/
+- id: vulpy-libapi-3-327
+  cwe: CWE-327
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: libapi.py
+    lines:
+    - 10
+    - 10
+  note: changed in good/
+- id: vulpy-libapi-3-918
+  cwe: CWE-918
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: libapi.py
+    lines:
+    - 10
+    - 10
+  note: changed in good/
+- id: vulpy-libapi-4-89
+  cwe: CWE-89
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: libapi.py
+    lines:
+    - 14
+    - 14
+  note: changed in good/
+- id: vulpy-libapi-4-79
+  cwe: CWE-79
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: libapi.py
+    lines:
+    - 14
+    - 14
+  note: changed in good/
+- id: vulpy-libapi-4-78
+  cwe: CWE-78
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: libapi.py
+    lines:
+    - 14
+    - 14
+  note: changed in good/
+- id: vulpy-libapi-4-22
+  cwe: CWE-22
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: libapi.py
+    lines:
+    - 14
+    - 14
+  note: changed in good/
+- id: vulpy-libapi-4-94
+  cwe: CWE-94
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: libapi.py
+    lines:
+    - 14
+    - 14
+  note: changed in good/
+- id: vulpy-libapi-4-502
+  cwe: CWE-502
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: libapi.py
+    lines:
+    - 14
+    - 14
+  note: changed in good/
+- id: vulpy-libapi-4-601
+  cwe: CWE-601
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: libapi.py
+    lines:
+    - 14
+    - 14
+  note: changed in good/
+- id: vulpy-libapi-4-327
+  cwe: CWE-327
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: libapi.py
+    lines:
+    - 14
+    - 14
+  note: changed in good/
+- id: vulpy-libapi-4-918
+  cwe: CWE-918
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: libapi.py
+    lines:
+    - 14
+    - 14
+  note: changed in good/
+- id: vulpy-libapi-5-89
+  cwe: CWE-89
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: libapi.py
+    lines:
+    - 16
+    - 18
+  note: changed in good/
+- id: vulpy-libapi-5-79
+  cwe: CWE-79
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: libapi.py
+    lines:
+    - 16
+    - 18
+  note: changed in good/
+- id: vulpy-libapi-5-78
+  cwe: CWE-78
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: libapi.py
+    lines:
+    - 16
+    - 18
+  note: changed in good/
+- id: vulpy-libapi-5-22
+  cwe: CWE-22
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: libapi.py
+    lines:
+    - 16
+    - 18
+  note: changed in good/
+- id: vulpy-libapi-5-94
+  cwe: CWE-94
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: libapi.py
+    lines:
+    - 16
+    - 18
+  note: changed in good/
+- id: vulpy-libapi-5-502
+  cwe: CWE-502
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: libapi.py
+    lines:
+    - 16
+    - 18
+  note: changed in good/
+- id: vulpy-libapi-5-601
+  cwe: CWE-601
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: libapi.py
+    lines:
+    - 16
+    - 18
+  note: changed in good/
+- id: vulpy-libapi-5-327
+  cwe: CWE-327
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: libapi.py
+    lines:
+    - 16
+    - 18
+  note: changed in good/
+- id: vulpy-libapi-5-918
+  cwe: CWE-918
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: libapi.py
+    lines:
+    - 16
+    - 18
+  note: changed in good/
+- id: vulpy-libapi-6-89
+  cwe: CWE-89
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: libapi.py
+    lines:
+    - 20
+    - 20
+  note: changed in good/
+- id: vulpy-libapi-6-79
+  cwe: CWE-79
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: libapi.py
+    lines:
+    - 20
+    - 20
+  note: changed in good/
+- id: vulpy-libapi-6-78
+  cwe: CWE-78
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: libapi.py
+    lines:
+    - 20
+    - 20
+  note: changed in good/
+- id: vulpy-libapi-6-22
+  cwe: CWE-22
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: libapi.py
+    lines:
+    - 20
+    - 20
+  note: changed in good/
+- id: vulpy-libapi-6-94
+  cwe: CWE-94
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: libapi.py
+    lines:
+    - 20
+    - 20
+  note: changed in good/
+- id: vulpy-libapi-6-502
+  cwe: CWE-502
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: libapi.py
+    lines:
+    - 20
+    - 20
+  note: changed in good/
+- id: vulpy-libapi-6-601
+  cwe: CWE-601
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: libapi.py
+    lines:
+    - 20
+    - 20
+  note: changed in good/
+- id: vulpy-libapi-6-327
+  cwe: CWE-327
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: libapi.py
+    lines:
+    - 20
+    - 20
+  note: changed in good/
+- id: vulpy-libapi-6-918
+  cwe: CWE-918
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: libapi.py
+    lines:
+    - 20
+    - 20
+  note: changed in good/
+- id: vulpy-libapi-7-89
+  cwe: CWE-89
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: libapi.py
+    lines:
+    - 22
+    - 24
+  note: changed in good/
+- id: vulpy-libapi-7-79
+  cwe: CWE-79
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: libapi.py
+    lines:
+    - 22
+    - 24
+  note: changed in good/
+- id: vulpy-libapi-7-78
+  cwe: CWE-78
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: libapi.py
+    lines:
+    - 22
+    - 24
+  note: changed in good/
+- id: vulpy-libapi-7-22
+  cwe: CWE-22
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: libapi.py
+    lines:
+    - 22
+    - 24
+  note: changed in good/
+- id: vulpy-libapi-7-94
+  cwe: CWE-94
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: libapi.py
+    lines:
+    - 22
+    - 24
+  note: changed in good/
+- id: vulpy-libapi-7-502
+  cwe: CWE-502
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: libapi.py
+    lines:
+    - 22
+    - 24
+  note: changed in good/
+- id: vulpy-libapi-7-601
+  cwe: CWE-601
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: libapi.py
+    lines:
+    - 22
+    - 24
+  note: changed in good/
+- id: vulpy-libapi-7-327
+  cwe: CWE-327
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: libapi.py
+    lines:
+    - 22
+    - 24
+  note: changed in good/
+- id: vulpy-libapi-7-918
+  cwe: CWE-918
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: libapi.py
+    lines:
+    - 22
+    - 24
+  note: changed in good/
+- id: vulpy-libapi-9-89
+  cwe: CWE-89
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: libapi.py
+    lines:
+    - 27
+    - 28
+  note: changed in good/
+- id: vulpy-libapi-9-79
+  cwe: CWE-79
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: libapi.py
+    lines:
+    - 27
+    - 28
+  note: changed in good/
+- id: vulpy-libapi-9-78
+  cwe: CWE-78
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: libapi.py
+    lines:
+    - 27
+    - 28
+  note: changed in good/
+- id: vulpy-libapi-9-22
+  cwe: CWE-22
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: libapi.py
+    lines:
+    - 27
+    - 28
+  note: changed in good/
+- id: vulpy-libapi-9-94
+  cwe: CWE-94
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: libapi.py
+    lines:
+    - 27
+    - 28
+  note: changed in good/
+- id: vulpy-libapi-9-502
+  cwe: CWE-502
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: libapi.py
+    lines:
+    - 27
+    - 28
+  note: changed in good/
+- id: vulpy-libapi-9-601
+  cwe: CWE-601
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: libapi.py
+    lines:
+    - 27
+    - 28
+  note: changed in good/
+- id: vulpy-libapi-9-327
+  cwe: CWE-327
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: libapi.py
+    lines:
+    - 27
+    - 28
+  note: changed in good/
+- id: vulpy-libapi-9-918
+  cwe: CWE-918
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: libapi.py
+    lines:
+    - 27
+    - 28
+  note: changed in good/
+- id: vulpy-libapi-10-89
+  cwe: CWE-89
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: libapi.py
+    lines:
+    - 31
+    - 31
+  note: changed in good/
+- id: vulpy-libapi-10-79
+  cwe: CWE-79
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: libapi.py
+    lines:
+    - 31
+    - 31
+  note: changed in good/
+- id: vulpy-libapi-10-78
+  cwe: CWE-78
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: libapi.py
+    lines:
+    - 31
+    - 31
+  note: changed in good/
+- id: vulpy-libapi-10-22
+  cwe: CWE-22
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: libapi.py
+    lines:
+    - 31
+    - 31
+  note: changed in good/
+- id: vulpy-libapi-10-94
+  cwe: CWE-94
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: libapi.py
+    lines:
+    - 31
+    - 31
+  note: changed in good/
+- id: vulpy-libapi-10-502
+  cwe: CWE-502
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: libapi.py
+    lines:
+    - 31
+    - 31
+  note: changed in good/
+- id: vulpy-libapi-10-601
+  cwe: CWE-601
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: libapi.py
+    lines:
+    - 31
+    - 31
+  note: changed in good/
+- id: vulpy-libapi-10-327
+  cwe: CWE-327
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: libapi.py
+    lines:
+    - 31
+    - 31
+  note: changed in good/
+- id: vulpy-libapi-10-918
+  cwe: CWE-918
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: libapi.py
+    lines:
+    - 31
+    - 31
+  note: changed in good/
+- id: vulpy-libapi-11-89
+  cwe: CWE-89
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: libapi.py
+    lines:
+    - 33
+    - 34
+  note: changed in good/
+- id: vulpy-libapi-11-79
+  cwe: CWE-79
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: libapi.py
+    lines:
+    - 33
+    - 34
+  note: changed in good/
+- id: vulpy-libapi-11-78
+  cwe: CWE-78
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: libapi.py
+    lines:
+    - 33
+    - 34
+  note: changed in good/
+- id: vulpy-libapi-11-22
+  cwe: CWE-22
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: libapi.py
+    lines:
+    - 33
+    - 34
+  note: changed in good/
+- id: vulpy-libapi-11-94
+  cwe: CWE-94
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: libapi.py
+    lines:
+    - 33
+    - 34
+  note: changed in good/
+- id: vulpy-libapi-11-502
+  cwe: CWE-502
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: libapi.py
+    lines:
+    - 33
+    - 34
+  note: changed in good/
+- id: vulpy-libapi-11-601
+  cwe: CWE-601
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: libapi.py
+    lines:
+    - 33
+    - 34
+  note: changed in good/
+- id: vulpy-libapi-11-327
+  cwe: CWE-327
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: libapi.py
+    lines:
+    - 33
+    - 34
+  note: changed in good/
+- id: vulpy-libapi-11-918
+  cwe: CWE-918
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: libapi.py
+    lines:
+    - 33
+    - 34
+  note: changed in good/
+- id: vulpy-libapi-12-89
+  cwe: CWE-89
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: libapi.py
+    lines:
+    - 36
+    - 36
+  note: changed in good/
+- id: vulpy-libapi-12-79
+  cwe: CWE-79
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: libapi.py
+    lines:
+    - 36
+    - 36
+  note: changed in good/
+- id: vulpy-libapi-12-78
+  cwe: CWE-78
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: libapi.py
+    lines:
+    - 36
+    - 36
+  note: changed in good/
+- id: vulpy-libapi-12-22
+  cwe: CWE-22
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: libapi.py
+    lines:
+    - 36
+    - 36
+  note: changed in good/
+- id: vulpy-libapi-12-94
+  cwe: CWE-94
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: libapi.py
+    lines:
+    - 36
+    - 36
+  note: changed in good/
+- id: vulpy-libapi-12-502
+  cwe: CWE-502
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: libapi.py
+    lines:
+    - 36
+    - 36
+  note: changed in good/
+- id: vulpy-libapi-12-601
+  cwe: CWE-601
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: libapi.py
+    lines:
+    - 36
+    - 36
+  note: changed in good/
+- id: vulpy-libapi-12-327
+  cwe: CWE-327
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: libapi.py
+    lines:
+    - 36
+    - 36
+  note: changed in good/
+- id: vulpy-libapi-12-918
+  cwe: CWE-918
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: libapi.py
+    lines:
+    - 36
+    - 36
+  note: changed in good/
+- id: vulpy-libsession-1-89
+  cwe: CWE-89
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: libsession.py
+    lines:
+    - 5
+    - 8
+  note: changed in good/
+- id: vulpy-libsession-1-79
+  cwe: CWE-79
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: libsession.py
+    lines:
+    - 5
+    - 8
+  note: changed in good/
+- id: vulpy-libsession-1-78
+  cwe: CWE-78
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: libsession.py
+    lines:
+    - 5
+    - 8
+  note: changed in good/
+- id: vulpy-libsession-1-22
+  cwe: CWE-22
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: libsession.py
+    lines:
+    - 5
+    - 8
+  note: changed in good/
+- id: vulpy-libsession-1-94
+  cwe: CWE-94
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: libsession.py
+    lines:
+    - 5
+    - 8
+  note: changed in good/
+- id: vulpy-libsession-1-502
+  cwe: CWE-502
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: libsession.py
+    lines:
+    - 5
+    - 8
+  note: changed in good/
+- id: vulpy-libsession-1-601
+  cwe: CWE-601
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: libsession.py
+    lines:
+    - 5
+    - 8
+  note: changed in good/
+- id: vulpy-libsession-1-327
+  cwe: CWE-327
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: libsession.py
+    lines:
+    - 5
+    - 8
+  note: changed in good/
+- id: vulpy-libsession-1-918
+  cwe: CWE-918
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: libsession.py
+    lines:
+    - 5
+    - 8
+  note: changed in good/
+- id: vulpy-libsession-2-89
+  cwe: CWE-89
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: libsession.py
+    lines:
+    - 11
+    - 11
+  note: changed in good/
+- id: vulpy-libsession-2-79
+  cwe: CWE-79
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: libsession.py
+    lines:
+    - 11
+    - 11
+  note: changed in good/
+- id: vulpy-libsession-2-78
+  cwe: CWE-78
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: libsession.py
+    lines:
+    - 11
+    - 11
+  note: changed in good/
+- id: vulpy-libsession-2-22
+  cwe: CWE-22
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: libsession.py
+    lines:
+    - 11
+    - 11
+  note: changed in good/
+- id: vulpy-libsession-2-94
+  cwe: CWE-94
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: libsession.py
+    lines:
+    - 11
+    - 11
+  note: changed in good/
+- id: vulpy-libsession-2-502
+  cwe: CWE-502
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: libsession.py
+    lines:
+    - 11
+    - 11
+  note: changed in good/
+- id: vulpy-libsession-2-601
+  cwe: CWE-601
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: libsession.py
+    lines:
+    - 11
+    - 11
+  note: changed in good/
+- id: vulpy-libsession-2-327
+  cwe: CWE-327
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: libsession.py
+    lines:
+    - 11
+    - 11
+  note: changed in good/
+- id: vulpy-libsession-2-918
+  cwe: CWE-918
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: libsession.py
+    lines:
+    - 11
+    - 11
+  note: changed in good/
+- id: vulpy-libsession-3-89
+  cwe: CWE-89
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: libsession.py
+    lines:
+    - 13
+    - 14
+  note: changed in good/
+- id: vulpy-libsession-3-79
+  cwe: CWE-79
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: libsession.py
+    lines:
+    - 13
+    - 14
+  note: changed in good/
+- id: vulpy-libsession-3-78
+  cwe: CWE-78
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: libsession.py
+    lines:
+    - 13
+    - 14
+  note: changed in good/
+- id: vulpy-libsession-3-22
+  cwe: CWE-22
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: libsession.py
+    lines:
+    - 13
+    - 14
+  note: changed in good/
+- id: vulpy-libsession-3-94
+  cwe: CWE-94
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: libsession.py
+    lines:
+    - 13
+    - 14
+  note: changed in good/
+- id: vulpy-libsession-3-502
+  cwe: CWE-502
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: libsession.py
+    lines:
+    - 13
+    - 14
+  note: changed in good/
+- id: vulpy-libsession-3-601
+  cwe: CWE-601
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: libsession.py
+    lines:
+    - 13
+    - 14
+  note: changed in good/
+- id: vulpy-libsession-3-327
+  cwe: CWE-327
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: libsession.py
+    lines:
+    - 13
+    - 14
+  note: changed in good/
+- id: vulpy-libsession-3-918
+  cwe: CWE-918
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: libsession.py
+    lines:
+    - 13
+    - 14
+  note: changed in good/
+- id: vulpy-libsession-4-89
+  cwe: CWE-89
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: libsession.py
+    lines:
+    - 17
+    - 20
+  note: changed in good/
+- id: vulpy-libsession-4-79
+  cwe: CWE-79
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: libsession.py
+    lines:
+    - 17
+    - 20
+  note: changed in good/
+- id: vulpy-libsession-4-78
+  cwe: CWE-78
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: libsession.py
+    lines:
+    - 17
+    - 20
+  note: changed in good/
+- id: vulpy-libsession-4-22
+  cwe: CWE-22
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: libsession.py
+    lines:
+    - 17
+    - 20
+  note: changed in good/
+- id: vulpy-libsession-4-94
+  cwe: CWE-94
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: libsession.py
+    lines:
+    - 17
+    - 20
+  note: changed in good/
+- id: vulpy-libsession-4-502
+  cwe: CWE-502
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: libsession.py
+    lines:
+    - 17
+    - 20
+  note: changed in good/
+- id: vulpy-libsession-4-601
+  cwe: CWE-601
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: libsession.py
+    lines:
+    - 17
+    - 20
+  note: changed in good/
+- id: vulpy-libsession-4-327
+  cwe: CWE-327
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: libsession.py
+    lines:
+    - 17
+    - 20
+  note: changed in good/
+- id: vulpy-libsession-4-918
+  cwe: CWE-918
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: libsession.py
+    lines:
+    - 17
+    - 20
+  note: changed in good/
+- id: vulpy-libsession-5-89
+  cwe: CWE-89
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: libsession.py
+    lines:
+    - 24
+    - 24
+  note: changed in good/
+- id: vulpy-libsession-5-79
+  cwe: CWE-79
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: libsession.py
+    lines:
+    - 24
+    - 24
+  note: changed in good/
+- id: vulpy-libsession-5-78
+  cwe: CWE-78
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: libsession.py
+    lines:
+    - 24
+    - 24
+  note: changed in good/
+- id: vulpy-libsession-5-22
+  cwe: CWE-22
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: libsession.py
+    lines:
+    - 24
+    - 24
+  note: changed in good/
+- id: vulpy-libsession-5-94
+  cwe: CWE-94
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: libsession.py
+    lines:
+    - 24
+    - 24
+  note: changed in good/
+- id: vulpy-libsession-5-502
+  cwe: CWE-502
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: libsession.py
+    lines:
+    - 24
+    - 24
+  note: changed in good/
+- id: vulpy-libsession-5-601
+  cwe: CWE-601
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: libsession.py
+    lines:
+    - 24
+    - 24
+  note: changed in good/
+- id: vulpy-libsession-5-327
+  cwe: CWE-327
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: libsession.py
+    lines:
+    - 24
+    - 24
+  note: changed in good/
+- id: vulpy-libsession-5-918
+  cwe: CWE-918
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: libsession.py
+    lines:
+    - 24
+    - 24
+  note: changed in good/
+- id: vulpy-libuser-1-89
+  cwe: CWE-89
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: libuser.py
+    lines:
+    - 2
+    - 2
+  note: changed in good/
+- id: vulpy-libuser-1-79
+  cwe: CWE-79
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: libuser.py
+    lines:
+    - 2
+    - 2
+  note: changed in good/
+- id: vulpy-libuser-1-78
+  cwe: CWE-78
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: libuser.py
+    lines:
+    - 2
+    - 2
+  note: changed in good/
+- id: vulpy-libuser-1-22
+  cwe: CWE-22
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: libuser.py
+    lines:
+    - 2
+    - 2
+  note: changed in good/
+- id: vulpy-libuser-1-94
+  cwe: CWE-94
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: libuser.py
+    lines:
+    - 2
+    - 2
+  note: changed in good/
+- id: vulpy-libuser-1-502
+  cwe: CWE-502
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: libuser.py
+    lines:
+    - 2
+    - 2
+  note: changed in good/
+- id: vulpy-libuser-1-601
+  cwe: CWE-601
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: libuser.py
+    lines:
+    - 2
+    - 2
+  note: changed in good/
+- id: vulpy-libuser-1-327
+  cwe: CWE-327
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: libuser.py
+    lines:
+    - 2
+    - 2
+  note: changed in good/
+- id: vulpy-libuser-1-918
+  cwe: CWE-918
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: libuser.py
+    lines:
+    - 2
+    - 2
+  note: changed in good/
+- id: vulpy-libuser-2-89
+  cwe: CWE-89
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: libuser.py
+    lines:
+    - 5
+    - 5
+  note: changed in good/
+- id: vulpy-libuser-2-79
+  cwe: CWE-79
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: libuser.py
+    lines:
+    - 5
+    - 5
+  note: changed in good/
+- id: vulpy-libuser-2-78
+  cwe: CWE-78
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: libuser.py
+    lines:
+    - 5
+    - 5
+  note: changed in good/
+- id: vulpy-libuser-2-22
+  cwe: CWE-22
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: libuser.py
+    lines:
+    - 5
+    - 5
+  note: changed in good/
+- id: vulpy-libuser-2-94
+  cwe: CWE-94
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: libuser.py
+    lines:
+    - 5
+    - 5
+  note: changed in good/
+- id: vulpy-libuser-2-502
+  cwe: CWE-502
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: libuser.py
+    lines:
+    - 5
+    - 5
+  note: changed in good/
+- id: vulpy-libuser-2-601
+  cwe: CWE-601
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: libuser.py
+    lines:
+    - 5
+    - 5
+  note: changed in good/
+- id: vulpy-libuser-2-327
+  cwe: CWE-327
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: libuser.py
+    lines:
+    - 5
+    - 5
+  note: changed in good/
+- id: vulpy-libuser-2-918
+  cwe: CWE-918
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: libuser.py
+    lines:
+    - 5
+    - 5
+  note: changed in good/
+- id: vulpy-libuser-3-89
+  cwe: CWE-89
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: libuser.py
+    lines:
+    - 12
+    - 12
+  note: changed in good/
+- id: vulpy-libuser-3-79
+  cwe: CWE-79
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: libuser.py
+    lines:
+    - 12
+    - 12
+  note: changed in good/
+- id: vulpy-libuser-3-78
+  cwe: CWE-78
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: libuser.py
+    lines:
+    - 12
+    - 12
+  note: changed in good/
+- id: vulpy-libuser-3-22
+  cwe: CWE-22
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: libuser.py
+    lines:
+    - 12
+    - 12
+  note: changed in good/
+- id: vulpy-libuser-3-94
+  cwe: CWE-94
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: libuser.py
+    lines:
+    - 12
+    - 12
+  note: changed in good/
+- id: vulpy-libuser-3-502
+  cwe: CWE-502
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: libuser.py
+    lines:
+    - 12
+    - 12
+  note: changed in good/
+- id: vulpy-libuser-3-601
+  cwe: CWE-601
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: libuser.py
+    lines:
+    - 12
+    - 12
+  note: changed in good/
+- id: vulpy-libuser-3-327
+  cwe: CWE-327
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: libuser.py
+    lines:
+    - 12
+    - 12
+  note: changed in good/
+- id: vulpy-libuser-3-918
+  cwe: CWE-918
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: libuser.py
+    lines:
+    - 12
+    - 12
+  note: changed in good/
+- id: vulpy-libuser-4-89
+  cwe: CWE-89
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: libuser.py
+    lines:
+    - 14
+    - 16
+  note: changed in good/
+- id: vulpy-libuser-4-79
+  cwe: CWE-79
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: libuser.py
+    lines:
+    - 14
+    - 16
+  note: changed in good/
+- id: vulpy-libuser-4-78
+  cwe: CWE-78
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: libuser.py
+    lines:
+    - 14
+    - 16
+  note: changed in good/
+- id: vulpy-libuser-4-22
+  cwe: CWE-22
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: libuser.py
+    lines:
+    - 14
+    - 16
+  note: changed in good/
+- id: vulpy-libuser-4-94
+  cwe: CWE-94
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: libuser.py
+    lines:
+    - 14
+    - 16
+  note: changed in good/
+- id: vulpy-libuser-4-502
+  cwe: CWE-502
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: libuser.py
+    lines:
+    - 14
+    - 16
+  note: changed in good/
+- id: vulpy-libuser-4-601
+  cwe: CWE-601
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: libuser.py
+    lines:
+    - 14
+    - 16
+  note: changed in good/
+- id: vulpy-libuser-4-327
+  cwe: CWE-327
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: libuser.py
+    lines:
+    - 14
+    - 16
+  note: changed in good/
+- id: vulpy-libuser-4-918
+  cwe: CWE-918
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: libuser.py
+    lines:
+    - 14
+    - 16
+  note: changed in good/
+- id: vulpy-libuser-6-89
+  cwe: CWE-89
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: libuser.py
+    lines:
+    - 20
+    - 20
+  note: changed in good/
+- id: vulpy-libuser-6-79
+  cwe: CWE-79
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: libuser.py
+    lines:
+    - 20
+    - 20
+  note: changed in good/
+- id: vulpy-libuser-6-78
+  cwe: CWE-78
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: libuser.py
+    lines:
+    - 20
+    - 20
+  note: changed in good/
+- id: vulpy-libuser-6-22
+  cwe: CWE-22
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: libuser.py
+    lines:
+    - 20
+    - 20
+  note: changed in good/
+- id: vulpy-libuser-6-94
+  cwe: CWE-94
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: libuser.py
+    lines:
+    - 20
+    - 20
+  note: changed in good/
+- id: vulpy-libuser-6-502
+  cwe: CWE-502
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: libuser.py
+    lines:
+    - 20
+    - 20
+  note: changed in good/
+- id: vulpy-libuser-6-601
+  cwe: CWE-601
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: libuser.py
+    lines:
+    - 20
+    - 20
+  note: changed in good/
+- id: vulpy-libuser-6-327
+  cwe: CWE-327
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: libuser.py
+    lines:
+    - 20
+    - 20
+  note: changed in good/
+- id: vulpy-libuser-6-918
+  cwe: CWE-918
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: libuser.py
+    lines:
+    - 20
+    - 20
+  note: changed in good/
+- id: vulpy-libuser-9-89
+  cwe: CWE-89
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: libuser.py
+    lines:
+    - 25
+    - 25
+  note: changed in good/
+- id: vulpy-libuser-9-79
+  cwe: CWE-79
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: libuser.py
+    lines:
+    - 25
+    - 25
+  note: changed in good/
+- id: vulpy-libuser-9-78
+  cwe: CWE-78
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: libuser.py
+    lines:
+    - 25
+    - 25
+  note: changed in good/
+- id: vulpy-libuser-9-22
+  cwe: CWE-22
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: libuser.py
+    lines:
+    - 25
+    - 25
+  note: changed in good/
+- id: vulpy-libuser-9-94
+  cwe: CWE-94
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: libuser.py
+    lines:
+    - 25
+    - 25
+  note: changed in good/
+- id: vulpy-libuser-9-502
+  cwe: CWE-502
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: libuser.py
+    lines:
+    - 25
+    - 25
+  note: changed in good/
+- id: vulpy-libuser-9-601
+  cwe: CWE-601
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: libuser.py
+    lines:
+    - 25
+    - 25
+  note: changed in good/
+- id: vulpy-libuser-9-327
+  cwe: CWE-327
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: libuser.py
+    lines:
+    - 25
+    - 25
+  note: changed in good/
+- id: vulpy-libuser-9-918
+  cwe: CWE-918
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: libuser.py
+    lines:
+    - 25
+    - 25
+  note: changed in good/
+- id: vulpy-libuser-11-89
+  cwe: CWE-89
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: libuser.py
+    lines:
+    - 28
+    - 28
+  note: changed in good/
+- id: vulpy-libuser-11-79
+  cwe: CWE-79
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: libuser.py
+    lines:
+    - 28
+    - 28
+  note: changed in good/
+- id: vulpy-libuser-11-78
+  cwe: CWE-78
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: libuser.py
+    lines:
+    - 28
+    - 28
+  note: changed in good/
+- id: vulpy-libuser-11-22
+  cwe: CWE-22
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: libuser.py
+    lines:
+    - 28
+    - 28
+  note: changed in good/
+- id: vulpy-libuser-11-94
+  cwe: CWE-94
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: libuser.py
+    lines:
+    - 28
+    - 28
+  note: changed in good/
+- id: vulpy-libuser-11-502
+  cwe: CWE-502
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: libuser.py
+    lines:
+    - 28
+    - 28
+  note: changed in good/
+- id: vulpy-libuser-11-601
+  cwe: CWE-601
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: libuser.py
+    lines:
+    - 28
+    - 28
+  note: changed in good/
+- id: vulpy-libuser-11-327
+  cwe: CWE-327
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: libuser.py
+    lines:
+    - 28
+    - 28
+  note: changed in good/
+- id: vulpy-libuser-11-918
+  cwe: CWE-918
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: libuser.py
+    lines:
+    - 28
+    - 28
+  note: changed in good/
+- id: vulpy-libuser-12-89
+  cwe: CWE-89
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: libuser.py
+    lines:
+    - 46
+    - 46
+  note: changed in good/
+- id: vulpy-libuser-12-79
+  cwe: CWE-79
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: libuser.py
+    lines:
+    - 46
+    - 46
+  note: changed in good/
+- id: vulpy-libuser-12-78
+  cwe: CWE-78
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: libuser.py
+    lines:
+    - 46
+    - 46
+  note: changed in good/
+- id: vulpy-libuser-12-22
+  cwe: CWE-22
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: libuser.py
+    lines:
+    - 46
+    - 46
+  note: changed in good/
+- id: vulpy-libuser-12-94
+  cwe: CWE-94
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: libuser.py
+    lines:
+    - 46
+    - 46
+  note: changed in good/
+- id: vulpy-libuser-12-502
+  cwe: CWE-502
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: libuser.py
+    lines:
+    - 46
+    - 46
+  note: changed in good/
+- id: vulpy-libuser-12-601
+  cwe: CWE-601
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: libuser.py
+    lines:
+    - 46
+    - 46
+  note: changed in good/
+- id: vulpy-libuser-12-327
+  cwe: CWE-327
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: libuser.py
+    lines:
+    - 46
+    - 46
+  note: changed in good/
+- id: vulpy-libuser-12-918
+  cwe: CWE-918
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: libuser.py
+    lines:
+    - 46
+    - 46
+  note: changed in good/
+- id: vulpy-libuser-13-89
+  cwe: CWE-89
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: libuser.py
+    lines:
+    - 48
+    - 51
+  note: changed in good/
+- id: vulpy-libuser-13-79
+  cwe: CWE-79
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: libuser.py
+    lines:
+    - 48
+    - 51
+  note: changed in good/
+- id: vulpy-libuser-13-78
+  cwe: CWE-78
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: libuser.py
+    lines:
+    - 48
+    - 51
+  note: changed in good/
+- id: vulpy-libuser-13-22
+  cwe: CWE-22
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: libuser.py
+    lines:
+    - 48
+    - 51
+  note: changed in good/
+- id: vulpy-libuser-13-94
+  cwe: CWE-94
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: libuser.py
+    lines:
+    - 48
+    - 51
+  note: changed in good/
+- id: vulpy-libuser-13-502
+  cwe: CWE-502
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: libuser.py
+    lines:
+    - 48
+    - 51
+  note: changed in good/
+- id: vulpy-libuser-13-601
+  cwe: CWE-601
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: libuser.py
+    lines:
+    - 48
+    - 51
+  note: changed in good/
+- id: vulpy-libuser-13-327
+  cwe: CWE-327
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: libuser.py
+    lines:
+    - 48
+    - 51
+  note: changed in good/
+- id: vulpy-libuser-13-918
+  cwe: CWE-918
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: libuser.py
+    lines:
+    - 48
+    - 51
+  note: changed in good/
+- id: vulpy-libuser-14-89
+  cwe: CWE-89
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: libuser.py
+    lines:
+    - 53
+    - 54
+  note: changed in good/
+- id: vulpy-libuser-14-79
+  cwe: CWE-79
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: libuser.py
+    lines:
+    - 53
+    - 54
+  note: changed in good/
+- id: vulpy-libuser-14-78
+  cwe: CWE-78
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: libuser.py
+    lines:
+    - 53
+    - 54
+  note: changed in good/
+- id: vulpy-libuser-14-22
+  cwe: CWE-22
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: libuser.py
+    lines:
+    - 53
+    - 54
+  note: changed in good/
+- id: vulpy-libuser-14-94
+  cwe: CWE-94
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: libuser.py
+    lines:
+    - 53
+    - 54
+  note: changed in good/
+- id: vulpy-libuser-14-502
+  cwe: CWE-502
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: libuser.py
+    lines:
+    - 53
+    - 54
+  note: changed in good/
+- id: vulpy-libuser-14-601
+  cwe: CWE-601
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: libuser.py
+    lines:
+    - 53
+    - 54
+  note: changed in good/
+- id: vulpy-libuser-14-327
+  cwe: CWE-327
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: libuser.py
+    lines:
+    - 53
+    - 54
+  note: changed in good/
+- id: vulpy-libuser-14-918
+  cwe: CWE-918
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: libuser.py
+    lines:
+    - 53
+    - 54
+  note: changed in good/
+- id: vulpy-libuser-15-89
+  cwe: CWE-89
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: libuser.py
+    lines:
+    - 59
+    - 60
+  note: changed in good/
+- id: vulpy-libuser-15-79
+  cwe: CWE-79
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: libuser.py
+    lines:
+    - 59
+    - 60
+  note: changed in good/
+- id: vulpy-libuser-15-78
+  cwe: CWE-78
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: libuser.py
+    lines:
+    - 59
+    - 60
+  note: changed in good/
+- id: vulpy-libuser-15-22
+  cwe: CWE-22
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: libuser.py
+    lines:
+    - 59
+    - 60
+  note: changed in good/
+- id: vulpy-libuser-15-94
+  cwe: CWE-94
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: libuser.py
+    lines:
+    - 59
+    - 60
+  note: changed in good/
+- id: vulpy-libuser-15-502
+  cwe: CWE-502
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: libuser.py
+    lines:
+    - 59
+    - 60
+  note: changed in good/
+- id: vulpy-libuser-15-601
+  cwe: CWE-601
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: libuser.py
+    lines:
+    - 59
+    - 60
+  note: changed in good/
+- id: vulpy-libuser-15-327
+  cwe: CWE-327
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: libuser.py
+    lines:
+    - 59
+    - 60
+  note: changed in good/
+- id: vulpy-libuser-15-918
+  cwe: CWE-918
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: libuser.py
+    lines:
+    - 59
+    - 60
+  note: changed in good/
+- id: vulpy-mod_api-0-89
+  cwe: CWE-89
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: mod_api.py
+    lines:
+    - 15
+    - 15
+  note: changed in good/
+- id: vulpy-mod_api-0-79
+  cwe: CWE-79
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: mod_api.py
+    lines:
+    - 15
+    - 15
+  note: changed in good/
+- id: vulpy-mod_api-0-78
+  cwe: CWE-78
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: mod_api.py
+    lines:
+    - 15
+    - 15
+  note: changed in good/
+- id: vulpy-mod_api-0-22
+  cwe: CWE-22
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: mod_api.py
+    lines:
+    - 15
+    - 15
+  note: changed in good/
+- id: vulpy-mod_api-0-94
+  cwe: CWE-94
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: mod_api.py
+    lines:
+    - 15
+    - 15
+  note: changed in good/
+- id: vulpy-mod_api-0-502
+  cwe: CWE-502
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: mod_api.py
+    lines:
+    - 15
+    - 15
+  note: changed in good/
+- id: vulpy-mod_api-0-601
+  cwe: CWE-601
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: mod_api.py
+    lines:
+    - 15
+    - 15
+  note: changed in good/
+- id: vulpy-mod_api-0-327
+  cwe: CWE-327
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: mod_api.py
+    lines:
+    - 15
+    - 15
+  note: changed in good/
+- id: vulpy-mod_api-0-918
+  cwe: CWE-918
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: mod_api.py
+    lines:
+    - 15
+    - 15
+  note: changed in good/
+- id: vulpy-mod_api-3-89
+  cwe: CWE-89
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: mod_api.py
+    lines:
+    - 37
+    - 37
+  note: changed in good/
+- id: vulpy-mod_api-3-79
+  cwe: CWE-79
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: mod_api.py
+    lines:
+    - 37
+    - 37
+  note: changed in good/
+- id: vulpy-mod_api-3-78
+  cwe: CWE-78
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: mod_api.py
+    lines:
+    - 37
+    - 37
+  note: changed in good/
+- id: vulpy-mod_api-3-22
+  cwe: CWE-22
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: mod_api.py
+    lines:
+    - 37
+    - 37
+  note: changed in good/
+- id: vulpy-mod_api-3-94
+  cwe: CWE-94
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: mod_api.py
+    lines:
+    - 37
+    - 37
+  note: changed in good/
+- id: vulpy-mod_api-3-502
+  cwe: CWE-502
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: mod_api.py
+    lines:
+    - 37
+    - 37
+  note: changed in good/
+- id: vulpy-mod_api-3-601
+  cwe: CWE-601
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: mod_api.py
+    lines:
+    - 37
+    - 37
+  note: changed in good/
+- id: vulpy-mod_api-3-327
+  cwe: CWE-327
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: mod_api.py
+    lines:
+    - 37
+    - 37
+  note: changed in good/
+- id: vulpy-mod_api-3-918
+  cwe: CWE-918
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: mod_api.py
+    lines:
+    - 37
+    - 37
+  note: changed in good/
+- id: vulpy-mod_api-4-89
+  cwe: CWE-89
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: mod_api.py
+    lines:
+    - 44
+    - 44
+  note: changed in good/
+- id: vulpy-mod_api-4-79
+  cwe: CWE-79
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: mod_api.py
+    lines:
+    - 44
+    - 44
+  note: changed in good/
+- id: vulpy-mod_api-4-78
+  cwe: CWE-78
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: mod_api.py
+    lines:
+    - 44
+    - 44
+  note: changed in good/
+- id: vulpy-mod_api-4-22
+  cwe: CWE-22
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: mod_api.py
+    lines:
+    - 44
+    - 44
+  note: changed in good/
+- id: vulpy-mod_api-4-94
+  cwe: CWE-94
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: mod_api.py
+    lines:
+    - 44
+    - 44
+  note: changed in good/
+- id: vulpy-mod_api-4-502
+  cwe: CWE-502
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: mod_api.py
+    lines:
+    - 44
+    - 44
+  note: changed in good/
+- id: vulpy-mod_api-4-601
+  cwe: CWE-601
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: mod_api.py
+    lines:
+    - 44
+    - 44
+  note: changed in good/
+- id: vulpy-mod_api-4-327
+  cwe: CWE-327
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: mod_api.py
+    lines:
+    - 44
+    - 44
+  note: changed in good/
+- id: vulpy-mod_api-4-918
+  cwe: CWE-918
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: mod_api.py
+    lines:
+    - 44
+    - 44
+  note: changed in good/
+- id: vulpy-mod_api-5-89
+  cwe: CWE-89
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: mod_api.py
+    lines:
+    - 57
+    - 57
+  note: changed in good/
+- id: vulpy-mod_api-5-79
+  cwe: CWE-79
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: mod_api.py
+    lines:
+    - 57
+    - 57
+  note: changed in good/
+- id: vulpy-mod_api-5-78
+  cwe: CWE-78
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: mod_api.py
+    lines:
+    - 57
+    - 57
+  note: changed in good/
+- id: vulpy-mod_api-5-22
+  cwe: CWE-22
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: mod_api.py
+    lines:
+    - 57
+    - 57
+  note: changed in good/
+- id: vulpy-mod_api-5-94
+  cwe: CWE-94
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: mod_api.py
+    lines:
+    - 57
+    - 57
+  note: changed in good/
+- id: vulpy-mod_api-5-502
+  cwe: CWE-502
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: mod_api.py
+    lines:
+    - 57
+    - 57
+  note: changed in good/
+- id: vulpy-mod_api-5-601
+  cwe: CWE-601
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: mod_api.py
+    lines:
+    - 57
+    - 57
+  note: changed in good/
+- id: vulpy-mod_api-5-327
+  cwe: CWE-327
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: mod_api.py
+    lines:
+    - 57
+    - 57
+  note: changed in good/
+- id: vulpy-mod_api-5-918
+  cwe: CWE-918
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: mod_api.py
+    lines:
+    - 57
+    - 57
+  note: changed in good/
+- id: vulpy-mod_api-6-89
+  cwe: CWE-89
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: mod_api.py
+    lines:
+    - 59
+    - 59
+  note: changed in good/
+- id: vulpy-mod_api-6-79
+  cwe: CWE-79
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: mod_api.py
+    lines:
+    - 59
+    - 59
+  note: changed in good/
+- id: vulpy-mod_api-6-78
+  cwe: CWE-78
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: mod_api.py
+    lines:
+    - 59
+    - 59
+  note: changed in good/
+- id: vulpy-mod_api-6-22
+  cwe: CWE-22
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: mod_api.py
+    lines:
+    - 59
+    - 59
+  note: changed in good/
+- id: vulpy-mod_api-6-94
+  cwe: CWE-94
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: mod_api.py
+    lines:
+    - 59
+    - 59
+  note: changed in good/
+- id: vulpy-mod_api-6-502
+  cwe: CWE-502
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: mod_api.py
+    lines:
+    - 59
+    - 59
+  note: changed in good/
+- id: vulpy-mod_api-6-601
+  cwe: CWE-601
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: mod_api.py
+    lines:
+    - 59
+    - 59
+  note: changed in good/
+- id: vulpy-mod_api-6-327
+  cwe: CWE-327
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: mod_api.py
+    lines:
+    - 59
+    - 59
+  note: changed in good/
+- id: vulpy-mod_api-6-918
+  cwe: CWE-918
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: mod_api.py
+    lines:
+    - 59
+    - 59
+  note: changed in good/
+- id: vulpy-mod_api-7-89
+  cwe: CWE-89
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: mod_api.py
+    lines:
+    - 62
+    - 69
+  note: changed in good/
+- id: vulpy-mod_api-7-79
+  cwe: CWE-79
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: mod_api.py
+    lines:
+    - 62
+    - 69
+  note: changed in good/
+- id: vulpy-mod_api-7-78
+  cwe: CWE-78
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: mod_api.py
+    lines:
+    - 62
+    - 69
+  note: changed in good/
+- id: vulpy-mod_api-7-22
+  cwe: CWE-22
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: mod_api.py
+    lines:
+    - 62
+    - 69
+  note: changed in good/
+- id: vulpy-mod_api-7-94
+  cwe: CWE-94
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: mod_api.py
+    lines:
+    - 62
+    - 69
+  note: changed in good/
+- id: vulpy-mod_api-7-502
+  cwe: CWE-502
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: mod_api.py
+    lines:
+    - 62
+    - 69
+  note: changed in good/
+- id: vulpy-mod_api-7-601
+  cwe: CWE-601
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: mod_api.py
+    lines:
+    - 62
+    - 69
+  note: changed in good/
+- id: vulpy-mod_api-7-327
+  cwe: CWE-327
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: mod_api.py
+    lines:
+    - 62
+    - 69
+  note: changed in good/
+- id: vulpy-mod_api-7-918
+  cwe: CWE-918
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: mod_api.py
+    lines:
+    - 62
+    - 69
+  note: changed in good/
+- id: vulpy-mod_mfa-0-89
+  cwe: CWE-89
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: mod_mfa.py
+    lines:
+    - 1
+    - 4
+  note: changed in good/
+- id: vulpy-mod_mfa-0-79
+  cwe: CWE-79
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: mod_mfa.py
+    lines:
+    - 1
+    - 4
+  note: changed in good/
+- id: vulpy-mod_mfa-0-78
+  cwe: CWE-78
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: mod_mfa.py
+    lines:
+    - 1
+    - 4
+  note: changed in good/
+- id: vulpy-mod_mfa-0-22
+  cwe: CWE-22
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: mod_mfa.py
+    lines:
+    - 1
+    - 4
+  note: changed in good/
+- id: vulpy-mod_mfa-0-94
+  cwe: CWE-94
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: mod_mfa.py
+    lines:
+    - 1
+    - 4
+  note: changed in good/
+- id: vulpy-mod_mfa-0-502
+  cwe: CWE-502
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: mod_mfa.py
+    lines:
+    - 1
+    - 4
+  note: changed in good/
+- id: vulpy-mod_mfa-0-601
+  cwe: CWE-601
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: mod_mfa.py
+    lines:
+    - 1
+    - 4
+  note: changed in good/
+- id: vulpy-mod_mfa-0-327
+  cwe: CWE-327
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: mod_mfa.py
+    lines:
+    - 1
+    - 4
+  note: changed in good/
+- id: vulpy-mod_mfa-0-918
+  cwe: CWE-918
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: mod_mfa.py
+    lines:
+    - 1
+    - 4
+  note: changed in good/
+- id: vulpy-mod_mfa-1-89
+  cwe: CWE-89
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: mod_mfa.py
+    lines:
+    - 7
+    - 7
+  note: changed in good/
+- id: vulpy-mod_mfa-1-79
+  cwe: CWE-79
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: mod_mfa.py
+    lines:
+    - 7
+    - 7
+  note: changed in good/
+- id: vulpy-mod_mfa-1-78
+  cwe: CWE-78
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: mod_mfa.py
+    lines:
+    - 7
+    - 7
+  note: changed in good/
+- id: vulpy-mod_mfa-1-22
+  cwe: CWE-22
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: mod_mfa.py
+    lines:
+    - 7
+    - 7
+  note: changed in good/
+- id: vulpy-mod_mfa-1-94
+  cwe: CWE-94
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: mod_mfa.py
+    lines:
+    - 7
+    - 7
+  note: changed in good/
+- id: vulpy-mod_mfa-1-502
+  cwe: CWE-502
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: mod_mfa.py
+    lines:
+    - 7
+    - 7
+  note: changed in good/
+- id: vulpy-mod_mfa-1-601
+  cwe: CWE-601
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: mod_mfa.py
+    lines:
+    - 7
+    - 7
+  note: changed in good/
+- id: vulpy-mod_mfa-1-327
+  cwe: CWE-327
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: mod_mfa.py
+    lines:
+    - 7
+    - 7
+  note: changed in good/
+- id: vulpy-mod_mfa-1-918
+  cwe: CWE-918
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: mod_mfa.py
+    lines:
+    - 7
+    - 7
+  note: changed in good/
+- id: vulpy-mod_mfa-2-89
+  cwe: CWE-89
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: mod_mfa.py
+    lines:
+    - 9
+    - 9
+  note: changed in good/
+- id: vulpy-mod_mfa-2-79
+  cwe: CWE-79
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: mod_mfa.py
+    lines:
+    - 9
+    - 9
+  note: changed in good/
+- id: vulpy-mod_mfa-2-78
+  cwe: CWE-78
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: mod_mfa.py
+    lines:
+    - 9
+    - 9
+  note: changed in good/
+- id: vulpy-mod_mfa-2-22
+  cwe: CWE-22
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: mod_mfa.py
+    lines:
+    - 9
+    - 9
+  note: changed in good/
+- id: vulpy-mod_mfa-2-94
+  cwe: CWE-94
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: mod_mfa.py
+    lines:
+    - 9
+    - 9
+  note: changed in good/
+- id: vulpy-mod_mfa-2-502
+  cwe: CWE-502
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: mod_mfa.py
+    lines:
+    - 9
+    - 9
+  note: changed in good/
+- id: vulpy-mod_mfa-2-601
+  cwe: CWE-601
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: mod_mfa.py
+    lines:
+    - 9
+    - 9
+  note: changed in good/
+- id: vulpy-mod_mfa-2-327
+  cwe: CWE-327
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: mod_mfa.py
+    lines:
+    - 9
+    - 9
+  note: changed in good/
+- id: vulpy-mod_mfa-2-918
+  cwe: CWE-918
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: mod_mfa.py
+    lines:
+    - 9
+    - 9
+  note: changed in good/
+- id: vulpy-mod_user-1-89
+  cwe: CWE-89
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: mod_user.py
+    lines:
+    - 2
+    - 2
+  note: changed in good/
+- id: vulpy-mod_user-1-79
+  cwe: CWE-79
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: mod_user.py
+    lines:
+    - 2
+    - 2
+  note: changed in good/
+- id: vulpy-mod_user-1-78
+  cwe: CWE-78
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: mod_user.py
+    lines:
+    - 2
+    - 2
+  note: changed in good/
+- id: vulpy-mod_user-1-22
+  cwe: CWE-22
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: mod_user.py
+    lines:
+    - 2
+    - 2
+  note: changed in good/
+- id: vulpy-mod_user-1-94
+  cwe: CWE-94
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: mod_user.py
+    lines:
+    - 2
+    - 2
+  note: changed in good/
+- id: vulpy-mod_user-1-502
+  cwe: CWE-502
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: mod_user.py
+    lines:
+    - 2
+    - 2
+  note: changed in good/
+- id: vulpy-mod_user-1-601
+  cwe: CWE-601
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: mod_user.py
+    lines:
+    - 2
+    - 2
+  note: changed in good/
+- id: vulpy-mod_user-1-327
+  cwe: CWE-327
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: mod_user.py
+    lines:
+    - 2
+    - 2
+  note: changed in good/
+- id: vulpy-mod_user-1-918
+  cwe: CWE-918
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: mod_user.py
+    lines:
+    - 2
+    - 2
+  note: changed in good/
+- id: vulpy-mod_user-3-89
+  cwe: CWE-89
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: mod_user.py
+    lines:
+    - 32
+    - 32
+  note: changed in good/
+- id: vulpy-mod_user-3-79
+  cwe: CWE-79
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: mod_user.py
+    lines:
+    - 32
+    - 32
+  note: changed in good/
+- id: vulpy-mod_user-3-78
+  cwe: CWE-78
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: mod_user.py
+    lines:
+    - 32
+    - 32
+  note: changed in good/
+- id: vulpy-mod_user-3-22
+  cwe: CWE-22
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: mod_user.py
+    lines:
+    - 32
+    - 32
+  note: changed in good/
+- id: vulpy-mod_user-3-94
+  cwe: CWE-94
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: mod_user.py
+    lines:
+    - 32
+    - 32
+  note: changed in good/
+- id: vulpy-mod_user-3-502
+  cwe: CWE-502
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: mod_user.py
+    lines:
+    - 32
+    - 32
+  note: changed in good/
+- id: vulpy-mod_user-3-601
+  cwe: CWE-601
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: mod_user.py
+    lines:
+    - 32
+    - 32
+  note: changed in good/
+- id: vulpy-mod_user-3-327
+  cwe: CWE-327
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: mod_user.py
+    lines:
+    - 32
+    - 32
+  note: changed in good/
+- id: vulpy-mod_user-3-918
+  cwe: CWE-918
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: mod_user.py
+    lines:
+    - 32
+    - 32
+  note: changed in good/
+- id: vulpy-mod_user-4-89
+  cwe: CWE-89
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: mod_user.py
+    lines:
+    - 47
+    - 54
+  note: changed in good/
+- id: vulpy-mod_user-4-79
+  cwe: CWE-79
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: mod_user.py
+    lines:
+    - 47
+    - 54
+  note: changed in good/
+- id: vulpy-mod_user-4-78
+  cwe: CWE-78
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: mod_user.py
+    lines:
+    - 47
+    - 54
+  note: changed in good/
+- id: vulpy-mod_user-4-22
+  cwe: CWE-22
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: mod_user.py
+    lines:
+    - 47
+    - 54
+  note: changed in good/
+- id: vulpy-mod_user-4-94
+  cwe: CWE-94
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: mod_user.py
+    lines:
+    - 47
+    - 54
+  note: changed in good/
+- id: vulpy-mod_user-4-502
+  cwe: CWE-502
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: mod_user.py
+    lines:
+    - 47
+    - 54
+  note: changed in good/
+- id: vulpy-mod_user-4-601
+  cwe: CWE-601
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: mod_user.py
+    lines:
+    - 47
+    - 54
+  note: changed in good/
+- id: vulpy-mod_user-4-327
+  cwe: CWE-327
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: mod_user.py
+    lines:
+    - 47
+    - 54
+  note: changed in good/
+- id: vulpy-mod_user-4-918
+  cwe: CWE-918
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: mod_user.py
+    lines:
+    - 47
+    - 54
+  note: changed in good/
+- id: vulpy-mod_user-5-89
+  cwe: CWE-89
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: mod_user.py
+    lines:
+    - 56
+    - 56
+  note: changed in good/
+- id: vulpy-mod_user-5-79
+  cwe: CWE-79
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: mod_user.py
+    lines:
+    - 56
+    - 56
+  note: changed in good/
+- id: vulpy-mod_user-5-78
+  cwe: CWE-78
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: mod_user.py
+    lines:
+    - 56
+    - 56
+  note: changed in good/
+- id: vulpy-mod_user-5-22
+  cwe: CWE-22
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: mod_user.py
+    lines:
+    - 56
+    - 56
+  note: changed in good/
+- id: vulpy-mod_user-5-94
+  cwe: CWE-94
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: mod_user.py
+    lines:
+    - 56
+    - 56
+  note: changed in good/
+- id: vulpy-mod_user-5-502
+  cwe: CWE-502
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: mod_user.py
+    lines:
+    - 56
+    - 56
+  note: changed in good/
+- id: vulpy-mod_user-5-601
+  cwe: CWE-601
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: mod_user.py
+    lines:
+    - 56
+    - 56
+  note: changed in good/
+- id: vulpy-mod_user-5-327
+  cwe: CWE-327
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: mod_user.py
+    lines:
+    - 56
+    - 56
+  note: changed in good/
+- id: vulpy-mod_user-5-918
+  cwe: CWE-918
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: mod_user.py
+    lines:
+    - 56
+    - 56
+  note: changed in good/
+- id: vulpy-mod_user-6-89
+  cwe: CWE-89
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: mod_user.py
+    lines:
+    - 58
+    - 59
+  note: changed in good/
+- id: vulpy-mod_user-6-79
+  cwe: CWE-79
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: mod_user.py
+    lines:
+    - 58
+    - 59
+  note: changed in good/
+- id: vulpy-mod_user-6-78
+  cwe: CWE-78
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: mod_user.py
+    lines:
+    - 58
+    - 59
+  note: changed in good/
+- id: vulpy-mod_user-6-22
+  cwe: CWE-22
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: mod_user.py
+    lines:
+    - 58
+    - 59
+  note: changed in good/
+- id: vulpy-mod_user-6-94
+  cwe: CWE-94
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: mod_user.py
+    lines:
+    - 58
+    - 59
+  note: changed in good/
+- id: vulpy-mod_user-6-502
+  cwe: CWE-502
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: mod_user.py
+    lines:
+    - 58
+    - 59
+  note: changed in good/
+- id: vulpy-mod_user-6-601
+  cwe: CWE-601
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: mod_user.py
+    lines:
+    - 58
+    - 59
+  note: changed in good/
+- id: vulpy-mod_user-6-327
+  cwe: CWE-327
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: mod_user.py
+    lines:
+    - 58
+    - 59
+  note: changed in good/
+- id: vulpy-mod_user-6-918
+  cwe: CWE-918
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: mod_user.py
+    lines:
+    - 58
+    - 59
+  note: changed in good/
+- id: vulpy-mod_user-7-89
+  cwe: CWE-89
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: mod_user.py
+    lines:
+    - 64
+    - 65
+  note: changed in good/
+- id: vulpy-mod_user-7-79
+  cwe: CWE-79
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: mod_user.py
+    lines:
+    - 64
+    - 65
+  note: changed in good/
+- id: vulpy-mod_user-7-78
+  cwe: CWE-78
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: mod_user.py
+    lines:
+    - 64
+    - 65
+  note: changed in good/
+- id: vulpy-mod_user-7-22
+  cwe: CWE-22
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: mod_user.py
+    lines:
+    - 64
+    - 65
+  note: changed in good/
+- id: vulpy-mod_user-7-94
+  cwe: CWE-94
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: mod_user.py
+    lines:
+    - 64
+    - 65
+  note: changed in good/
+- id: vulpy-mod_user-7-502
+  cwe: CWE-502
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: mod_user.py
+    lines:
+    - 64
+    - 65
+  note: changed in good/
+- id: vulpy-mod_user-7-601
+  cwe: CWE-601
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: mod_user.py
+    lines:
+    - 64
+    - 65
+  note: changed in good/
+- id: vulpy-mod_user-7-327
+  cwe: CWE-327
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: mod_user.py
+    lines:
+    - 64
+    - 65
+  note: changed in good/
+- id: vulpy-mod_user-7-918
+  cwe: CWE-918
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: mod_user.py
+    lines:
+    - 64
+    - 65
+  note: changed in good/
+- id: vulpy-mod_user-8-89
+  cwe: CWE-89
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: mod_user.py
+    lines:
+    - 67
+    - 67
+  note: changed in good/
+- id: vulpy-mod_user-8-79
+  cwe: CWE-79
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: mod_user.py
+    lines:
+    - 67
+    - 67
+  note: changed in good/
+- id: vulpy-mod_user-8-78
+  cwe: CWE-78
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: mod_user.py
+    lines:
+    - 67
+    - 67
+  note: changed in good/
+- id: vulpy-mod_user-8-22
+  cwe: CWE-22
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: mod_user.py
+    lines:
+    - 67
+    - 67
+  note: changed in good/
+- id: vulpy-mod_user-8-94
+  cwe: CWE-94
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: mod_user.py
+    lines:
+    - 67
+    - 67
+  note: changed in good/
+- id: vulpy-mod_user-8-502
+  cwe: CWE-502
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: mod_user.py
+    lines:
+    - 67
+    - 67
+  note: changed in good/
+- id: vulpy-mod_user-8-601
+  cwe: CWE-601
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: mod_user.py
+    lines:
+    - 67
+    - 67
+  note: changed in good/
+- id: vulpy-mod_user-8-327
+  cwe: CWE-327
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: mod_user.py
+    lines:
+    - 67
+    - 67
+  note: changed in good/
+- id: vulpy-mod_user-8-918
+  cwe: CWE-918
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: mod_user.py
+    lines:
+    - 67
+    - 67
+  note: changed in good/
+- id: vulpy-mod_user-9-89
+  cwe: CWE-89
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: mod_user.py
+    lines:
+    - 69
+    - 70
+  note: changed in good/
+- id: vulpy-mod_user-9-79
+  cwe: CWE-79
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: mod_user.py
+    lines:
+    - 69
+    - 70
+  note: changed in good/
+- id: vulpy-mod_user-9-78
+  cwe: CWE-78
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: mod_user.py
+    lines:
+    - 69
+    - 70
+  note: changed in good/
+- id: vulpy-mod_user-9-22
+  cwe: CWE-22
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: mod_user.py
+    lines:
+    - 69
+    - 70
+  note: changed in good/
+- id: vulpy-mod_user-9-94
+  cwe: CWE-94
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: mod_user.py
+    lines:
+    - 69
+    - 70
+  note: changed in good/
+- id: vulpy-mod_user-9-502
+  cwe: CWE-502
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: mod_user.py
+    lines:
+    - 69
+    - 70
+  note: changed in good/
+- id: vulpy-mod_user-9-601
+  cwe: CWE-601
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: mod_user.py
+    lines:
+    - 69
+    - 70
+  note: changed in good/
+- id: vulpy-mod_user-9-327
+  cwe: CWE-327
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: mod_user.py
+    lines:
+    - 69
+    - 70
+  note: changed in good/
+- id: vulpy-mod_user-9-918
+  cwe: CWE-918
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: mod_user.py
+    lines:
+    - 69
+    - 70
+  note: changed in good/
+- id: vulpy-mod_user-10-89
+  cwe: CWE-89
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: mod_user.py
+    lines:
+    - 72
+    - 74
+  note: changed in good/
+- id: vulpy-mod_user-10-79
+  cwe: CWE-79
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: mod_user.py
+    lines:
+    - 72
+    - 74
+  note: changed in good/
+- id: vulpy-mod_user-10-78
+  cwe: CWE-78
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: mod_user.py
+    lines:
+    - 72
+    - 74
+  note: changed in good/
+- id: vulpy-mod_user-10-22
+  cwe: CWE-22
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: mod_user.py
+    lines:
+    - 72
+    - 74
+  note: changed in good/
+- id: vulpy-mod_user-10-94
+  cwe: CWE-94
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: mod_user.py
+    lines:
+    - 72
+    - 74
+  note: changed in good/
+- id: vulpy-mod_user-10-502
+  cwe: CWE-502
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: mod_user.py
+    lines:
+    - 72
+    - 74
+  note: changed in good/
+- id: vulpy-mod_user-10-601
+  cwe: CWE-601
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: mod_user.py
+    lines:
+    - 72
+    - 74
+  note: changed in good/
+- id: vulpy-mod_user-10-327
+  cwe: CWE-327
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: mod_user.py
+    lines:
+    - 72
+    - 74
+  note: changed in good/
+- id: vulpy-mod_user-10-918
+  cwe: CWE-918
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: mod_user.py
+    lines:
+    - 72
+    - 74
+  note: changed in good/
+- id: vulpy-mod_user-11-89
+  cwe: CWE-89
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: mod_user.py
+    lines:
+    - 76
+    - 78
+  note: changed in good/
+- id: vulpy-mod_user-11-79
+  cwe: CWE-79
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: mod_user.py
+    lines:
+    - 76
+    - 78
+  note: changed in good/
+- id: vulpy-mod_user-11-78
+  cwe: CWE-78
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: mod_user.py
+    lines:
+    - 76
+    - 78
+  note: changed in good/
+- id: vulpy-mod_user-11-22
+  cwe: CWE-22
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: mod_user.py
+    lines:
+    - 76
+    - 78
+  note: changed in good/
+- id: vulpy-mod_user-11-94
+  cwe: CWE-94
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: mod_user.py
+    lines:
+    - 76
+    - 78
+  note: changed in good/
+- id: vulpy-mod_user-11-502
+  cwe: CWE-502
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: mod_user.py
+    lines:
+    - 76
+    - 78
+  note: changed in good/
+- id: vulpy-mod_user-11-601
+  cwe: CWE-601
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: mod_user.py
+    lines:
+    - 76
+    - 78
+  note: changed in good/
+- id: vulpy-mod_user-11-327
+  cwe: CWE-327
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: mod_user.py
+    lines:
+    - 76
+    - 78
+  note: changed in good/
+- id: vulpy-mod_user-11-918
+  cwe: CWE-918
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: mod_user.py
+    lines:
+    - 76
+    - 78
+  note: changed in good/
+- id: vulpy-mod_user-12-89
+  cwe: CWE-89
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: mod_user.py
+    lines:
+    - 80
+    - 81
+  note: changed in good/
+- id: vulpy-mod_user-12-79
+  cwe: CWE-79
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: mod_user.py
+    lines:
+    - 80
+    - 81
+  note: changed in good/
+- id: vulpy-mod_user-12-78
+  cwe: CWE-78
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: mod_user.py
+    lines:
+    - 80
+    - 81
+  note: changed in good/
+- id: vulpy-mod_user-12-22
+  cwe: CWE-22
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: mod_user.py
+    lines:
+    - 80
+    - 81
+  note: changed in good/
+- id: vulpy-mod_user-12-94
+  cwe: CWE-94
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: mod_user.py
+    lines:
+    - 80
+    - 81
+  note: changed in good/
+- id: vulpy-mod_user-12-502
+  cwe: CWE-502
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: mod_user.py
+    lines:
+    - 80
+    - 81
+  note: changed in good/
+- id: vulpy-mod_user-12-601
+  cwe: CWE-601
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: mod_user.py
+    lines:
+    - 80
+    - 81
+  note: changed in good/
+- id: vulpy-mod_user-12-327
+  cwe: CWE-327
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: mod_user.py
+    lines:
+    - 80
+    - 81
+  note: changed in good/
+- id: vulpy-mod_user-12-918
+  cwe: CWE-918
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: mod_user.py
+    lines:
+    - 80
+    - 81
+  note: changed in good/
+- id: vulpy-mod_user-13-89
+  cwe: CWE-89
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: mod_user.py
+    lines:
+    - 83
+    - 83
+  note: changed in good/
+- id: vulpy-mod_user-13-79
+  cwe: CWE-79
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: mod_user.py
+    lines:
+    - 83
+    - 83
+  note: changed in good/
+- id: vulpy-mod_user-13-78
+  cwe: CWE-78
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: mod_user.py
+    lines:
+    - 83
+    - 83
+  note: changed in good/
+- id: vulpy-mod_user-13-22
+  cwe: CWE-22
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: mod_user.py
+    lines:
+    - 83
+    - 83
+  note: changed in good/
+- id: vulpy-mod_user-13-94
+  cwe: CWE-94
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: mod_user.py
+    lines:
+    - 83
+    - 83
+  note: changed in good/
+- id: vulpy-mod_user-13-502
+  cwe: CWE-502
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: mod_user.py
+    lines:
+    - 83
+    - 83
+  note: changed in good/
+- id: vulpy-mod_user-13-601
+  cwe: CWE-601
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: mod_user.py
+    lines:
+    - 83
+    - 83
+  note: changed in good/
+- id: vulpy-mod_user-13-327
+  cwe: CWE-327
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: mod_user.py
+    lines:
+    - 83
+    - 83
+  note: changed in good/
+- id: vulpy-mod_user-13-918
+  cwe: CWE-918
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: mod_user.py
+    lines:
+    - 83
+    - 83
+  note: changed in good/
+- id: vulpy-vulpy-0-89
+  cwe: CWE-89
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: vulpy.py
+    lines:
+    - 7
+    - 9
+  note: changed in good/
+- id: vulpy-vulpy-0-79
+  cwe: CWE-79
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: vulpy.py
+    lines:
+    - 7
+    - 9
+  note: changed in good/
+- id: vulpy-vulpy-0-78
+  cwe: CWE-78
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: vulpy.py
+    lines:
+    - 7
+    - 9
+  note: changed in good/
+- id: vulpy-vulpy-0-22
+  cwe: CWE-22
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: vulpy.py
+    lines:
+    - 7
+    - 9
+  note: changed in good/
+- id: vulpy-vulpy-0-94
+  cwe: CWE-94
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: vulpy.py
+    lines:
+    - 7
+    - 9
+  note: changed in good/
+- id: vulpy-vulpy-0-502
+  cwe: CWE-502
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: vulpy.py
+    lines:
+    - 7
+    - 9
+  note: changed in good/
+- id: vulpy-vulpy-0-601
+  cwe: CWE-601
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: vulpy.py
+    lines:
+    - 7
+    - 9
+  note: changed in good/
+- id: vulpy-vulpy-0-327
+  cwe: CWE-327
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: vulpy.py
+    lines:
+    - 7
+    - 9
+  note: changed in good/
+- id: vulpy-vulpy-0-918
+  cwe: CWE-918
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: vulpy.py
+    lines:
+    - 7
+    - 9
+  note: changed in good/
+- id: vulpy-vulpy-1-89
+  cwe: CWE-89
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: vulpy.py
+    lines:
+    - 11
+    - 12
+  note: changed in good/
+- id: vulpy-vulpy-1-79
+  cwe: CWE-79
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: vulpy.py
+    lines:
+    - 11
+    - 12
+  note: changed in good/
+- id: vulpy-vulpy-1-78
+  cwe: CWE-78
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: vulpy.py
+    lines:
+    - 11
+    - 12
+  note: changed in good/
+- id: vulpy-vulpy-1-22
+  cwe: CWE-22
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: vulpy.py
+    lines:
+    - 11
+    - 12
+  note: changed in good/
+- id: vulpy-vulpy-1-94
+  cwe: CWE-94
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: vulpy.py
+    lines:
+    - 11
+    - 12
+  note: changed in good/
+- id: vulpy-vulpy-1-502
+  cwe: CWE-502
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: vulpy.py
+    lines:
+    - 11
+    - 12
+  note: changed in good/
+- id: vulpy-vulpy-1-601
+  cwe: CWE-601
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: vulpy.py
+    lines:
+    - 11
+    - 12
+  note: changed in good/
+- id: vulpy-vulpy-1-327
+  cwe: CWE-327
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: vulpy.py
+    lines:
+    - 11
+    - 12
+  note: changed in good/
+- id: vulpy-vulpy-1-918
+  cwe: CWE-918
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: vulpy.py
+    lines:
+    - 11
+    - 12
+  note: changed in good/
+- id: vulpy-vulpy-3-89
+  cwe: CWE-89
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: vulpy.py
+    lines:
+    - 16
+    - 16
+  note: changed in good/
+- id: vulpy-vulpy-3-79
+  cwe: CWE-79
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: vulpy.py
+    lines:
+    - 16
+    - 16
+  note: changed in good/
+- id: vulpy-vulpy-3-78
+  cwe: CWE-78
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: vulpy.py
+    lines:
+    - 16
+    - 16
+  note: changed in good/
+- id: vulpy-vulpy-3-22
+  cwe: CWE-22
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: vulpy.py
+    lines:
+    - 16
+    - 16
+  note: changed in good/
+- id: vulpy-vulpy-3-94
+  cwe: CWE-94
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: vulpy.py
+    lines:
+    - 16
+    - 16
+  note: changed in good/
+- id: vulpy-vulpy-3-502
+  cwe: CWE-502
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: vulpy.py
+    lines:
+    - 16
+    - 16
+  note: changed in good/
+- id: vulpy-vulpy-3-601
+  cwe: CWE-601
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: vulpy.py
+    lines:
+    - 16
+    - 16
+  note: changed in good/
+- id: vulpy-vulpy-3-327
+  cwe: CWE-327
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: vulpy.py
+    lines:
+    - 16
+    - 16
+  note: changed in good/
+- id: vulpy-vulpy-3-918
+  cwe: CWE-918
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: vulpy.py
+    lines:
+    - 16
+    - 16
+  note: changed in good/
+- id: vulpy-vulpy-4-89
+  cwe: CWE-89
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: vulpy.py
+    lines:
+    - 36
+    - 38
+  note: changed in good/
+- id: vulpy-vulpy-4-79
+  cwe: CWE-79
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: vulpy.py
+    lines:
+    - 36
+    - 38
+  note: changed in good/
+- id: vulpy-vulpy-4-78
+  cwe: CWE-78
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: vulpy.py
+    lines:
+    - 36
+    - 38
+  note: changed in good/
+- id: vulpy-vulpy-4-22
+  cwe: CWE-22
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: vulpy.py
+    lines:
+    - 36
+    - 38
+  note: changed in good/
+- id: vulpy-vulpy-4-94
+  cwe: CWE-94
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: vulpy.py
+    lines:
+    - 36
+    - 38
+  note: changed in good/
+- id: vulpy-vulpy-4-502
+  cwe: CWE-502
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: vulpy.py
+    lines:
+    - 36
+    - 38
+  note: changed in good/
+- id: vulpy-vulpy-4-601
+  cwe: CWE-601
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: vulpy.py
+    lines:
+    - 36
+    - 38
+  note: changed in good/
+- id: vulpy-vulpy-4-327
+  cwe: CWE-327
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: vulpy.py
+    lines:
+    - 36
+    - 38
+  note: changed in good/
+- id: vulpy-vulpy-4-918
+  cwe: CWE-918
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: vulpy.py
+    lines:
+    - 36
+    - 38
+  note: changed in good/
+- id: vulpy-vulpy-6-89
+  cwe: CWE-89
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: vulpy.py
+    lines:
+    - 55
+    - 55
+  note: changed in good/
+- id: vulpy-vulpy-6-79
+  cwe: CWE-79
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: vulpy.py
+    lines:
+    - 55
+    - 55
+  note: changed in good/
+- id: vulpy-vulpy-6-78
+  cwe: CWE-78
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: vulpy.py
+    lines:
+    - 55
+    - 55
+  note: changed in good/
+- id: vulpy-vulpy-6-22
+  cwe: CWE-22
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: vulpy.py
+    lines:
+    - 55
+    - 55
+  note: changed in good/
+- id: vulpy-vulpy-6-94
+  cwe: CWE-94
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: vulpy.py
+    lines:
+    - 55
+    - 55
+  note: changed in good/
+- id: vulpy-vulpy-6-502
+  cwe: CWE-502
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: vulpy.py
+    lines:
+    - 55
+    - 55
+  note: changed in good/
+- id: vulpy-vulpy-6-601
+  cwe: CWE-601
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: vulpy.py
+    lines:
+    - 55
+    - 55
+  note: changed in good/
+- id: vulpy-vulpy-6-327
+  cwe: CWE-327
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: vulpy.py
+    lines:
+    - 55
+    - 55
+  note: changed in good/
+- id: vulpy-vulpy-6-918
+  cwe: CWE-918
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: vulpy.py
+    lines:
+    - 55
+    - 55
+  note: changed in good/

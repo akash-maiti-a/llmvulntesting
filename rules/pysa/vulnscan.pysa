@@ -1,0 +1,42 @@
+# vulnscan additions to Pyre's bundled taint models.
+
+# Entry points: Pysa only knows a value is user-controlled if it comes from a
+# modelled source. Django/aiohttp views receive the request as a parameter that
+# is often unannotated, so treat every parameter named `request` as a source.
+ModelQuery(
+  name = "vulnscan_request_param_functions",
+  find = "functions",
+  where = [name.matches(".*")],
+  model = [
+    Parameters(TaintSource[UserControlled], where=[name.equals("request")])
+  ]
+)
+
+ModelQuery(
+  name = "vulnscan_request_param_methods",
+  find = "methods",
+  where = [name.matches(".*")],
+  model = [
+    Parameters(TaintSource[UserControlled], where=[name.equals("request")])
+  ]
+)
+
+# aiopg wraps psycopg2, but its cursor is a separate class the bundled models miss.
+async def aiopg.cursor.Cursor.execute(self, operation: TaintSink[SQL], parameters=..., *, timeout=...): ...
+
+# Pillow's ImageMath.eval evaluates an expression string.
+def PIL.ImageMath.eval(expression: TaintSink[RemoteCodeExecution], _dict=..., **kw): ...
+
+# The `request` object handed to a template renderer is context, not output.
+# Without these, a tainted `request` parameter reaches HttpResponse.content
+# through the renderer's body and every render() call reports XSS.
+def django.shortcuts.render(request: Sanitize, template_name, context, content_type, status, using): ...
+def django.template.loader.render_to_string(template_name, context, request: Sanitize, using): ...
+def aiohttp_jinja2.render_template(template_name, request: Sanitize, context, *, app_key, encoding, status): ...
+def aiohttp_jinja2.render_string(template_name, request: Sanitize, context, *, app_key): ...
+
+
+# Flask's global `request` is an untyped LocalProxy, so Pyre cannot resolve its
+# attributes to the bundled werkzeug models. Taint the global itself; attribute
+# reads and method calls on it then propagate the taint.
+flask.globals.request: TaintSource[UserControlled] = ...

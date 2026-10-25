@@ -1,0 +1,16 @@
+WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+
+[notice] A new release of pip is available: 24.0 -> 26.2.2
+[notice] To update, run: pip install --upgrade pip
+benchmarkpython pysa: 492 findings (45s)
+dsvw pysa: 22 findings (7s)
+WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+
+[notice] A new release of pip is available: 24.0 -> 26.2.2
+[notice] To update, run: pip install --upgrade pip
+django.nv pysa: 38 findings (231s)
+WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+
+[notice] A new release of pip is available: 24.0 -> 26.2.2
+[notice] To update, run: pip install --upgrade pip
+vulpy pysa: 16 findings (19s)

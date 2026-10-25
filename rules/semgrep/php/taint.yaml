@@ -1,0 +1,180 @@
+# Custom PHP taint rules. Tuned for recall: only sanitizers that fully
+# neutralize the sink class are listed, so weak escaping (e.g.
+# mysqli_real_escape_string in a numeric context) is left for LLM triage.
+rules:
+  - id: php-taint-sqli
+    languages: [php]
+    severity: ERROR
+    message: User input flows into a SQL query built with string operations.
+    metadata: {cwe: ["CWE-89"], category: security}
+    mode: taint
+    pattern-sources: &php_sources
+      - pattern-either:
+          - pattern: $_GET
+          - pattern: $_POST
+          - pattern: $_REQUEST
+          - pattern: $_COOKIE
+          - pattern: $_FILES
+          - pattern: $_SERVER
+          - pattern: file_get_contents('php://input')
+    pattern-sanitizers:
+      - pattern-either:
+          - pattern: intval(...)
+          - pattern: (int) $X
+          - pattern: floatval(...)
+          - pattern: (float) $X
+    pattern-sinks:
+      - patterns:
+          - pattern-either:
+              - pattern: mysqli_query($C, $Q, ...)
+              - pattern: mysql_query($Q, ...)
+              - pattern: $DB->query($Q, ...)
+              - pattern: $DB->exec($Q)
+              - pattern: $DB->prepare($Q)
+              - pattern: pg_query($C, $Q)
+          - focus-metavariable: $Q
+
+  - id: php-taint-cmdi
+    languages: [php]
+    severity: ERROR
+    message: User input reaches an OS command execution function.
+    metadata: {cwe: ["CWE-78"], category: security}
+    mode: taint
+    pattern-sources: *php_sources
+    pattern-sanitizers:
+      - pattern-either:
+          - pattern: escapeshellarg(...)
+          - pattern: intval(...)
+          - pattern: (int) $X
+    pattern-sinks:
+      - pattern-either:
+          - pattern: shell_exec(...)
+          - pattern: exec(...)
+          - pattern: system(...)
+          - pattern: passthru(...)
+          - pattern: popen(...)
+          - pattern: proc_open(...)
+          - pattern: pcntl_exec(...)
+
+  - id: php-taint-xss
+    languages: [php]
+    severity: WARNING
+    message: User input is written into the HTML response without encoding.
+    metadata: {cwe: ["CWE-79"], category: security}
+    mode: taint
+    pattern-sources: *php_sources
+    pattern-sanitizers:
+      - pattern-either:
+          - pattern: htmlspecialchars(...)
+          - pattern: htmlentities(...)
+          - pattern: intval(...)
+          - pattern: (int) $X
+          - pattern: urlencode(...)
+          - pattern: json_encode(...)
+    pattern-sinks:
+      - pattern-either:
+          - pattern: echo $X;
+          - pattern: print($X)
+          - pattern: printf(...)
+          # Building an HTML buffer that is echoed later ($html, as in DVWA).
+          # The name must be constrained: an unconstrained $HTML matched every
+          # assignment of request data and made this rule ~87% of all custom
+          # alerts. Broader names ($out, $output) also matched shell output.
+          - patterns:
+              - pattern-either:
+                  - pattern: $HTML .= $X
+                  - pattern: $HTML = $X
+              - metavariable-regex:
+                  metavariable: $HTML
+                  regex: (?i)^\$html$
+              - focus-metavariable: $X
+
+  - id: php-taint-file-inclusion
+    languages: [php]
+    severity: ERROR
+    message: User input controls a path passed to include/require.
+    metadata: {cwe: ["CWE-98"], category: security}
+    mode: taint
+    pattern-sources: *php_sources
+    pattern-sanitizers:
+      - pattern: basename(...)
+    pattern-sinks:
+      - pattern-either:
+          - pattern: include $X;
+          - pattern: include_once $X;
+          - pattern: require $X;
+          - pattern: require_once $X;
+
+  - id: php-taint-path-traversal
+    languages: [php]
+    severity: WARNING
+    message: User input controls a filesystem path.
+    metadata: {cwe: ["CWE-22"], category: security}
+    mode: taint
+    pattern-sources: *php_sources
+    pattern-sanitizers:
+      - pattern: basename(...)
+    pattern-sinks:
+      - patterns:
+          - pattern-either:
+              - pattern: file_get_contents($P, ...)
+              - pattern: fopen($P, ...)
+              - pattern: readfile($P, ...)
+              - pattern: file($P, ...)
+              - pattern: unlink($P)
+              - pattern: file_put_contents($P, ...)
+              - pattern: move_uploaded_file($T, $P)
+              - pattern: copy($S, $P)
+          - focus-metavariable: $P
+
+  - id: php-taint-code-injection
+    languages: [php]
+    severity: ERROR
+    message: User input reaches a dynamic code evaluation function.
+    metadata: {cwe: ["CWE-95"], category: security}
+    mode: taint
+    pattern-sources: *php_sources
+    pattern-sinks:
+      - pattern-either:
+          - pattern: eval(...)
+          - pattern: assert(...)
+          - pattern: create_function(...)
+          - pattern: call_user_func($F, ...)
+
+  - id: php-taint-open-redirect
+    languages: [php]
+    severity: WARNING
+    message: User input controls a redirect Location header.
+    metadata: {cwe: ["CWE-601"], category: security}
+    mode: taint
+    pattern-sources: *php_sources
+    pattern-sinks:
+      - patterns:
+          - pattern: header($H, ...)
+          - metavariable-regex:
+              metavariable: $H
+              regex: (?is).*location.*
+
+  - id: php-taint-unserialize
+    languages: [php]
+    severity: ERROR
+    message: User input is passed to unserialize().
+    metadata: {cwe: ["CWE-502"], category: security}
+    mode: taint
+    pattern-sources: *php_sources
+    pattern-sinks:
+      - pattern: unserialize(...)
+
+  - id: php-taint-ssrf
+    languages: [php]
+    severity: WARNING
+    message: User input controls the URL of a server-side request.
+    metadata: {cwe: ["CWE-918"], category: security}
+    mode: taint
+    pattern-sources: *php_sources
+    pattern-sinks:
+      - patterns:
+          - pattern-either:
+              - pattern: curl_setopt($C, CURLOPT_URL, $U)
+              - pattern: curl_init($U)
+          - focus-metavariable: $U

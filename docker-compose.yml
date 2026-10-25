@@ -1,0 +1,30 @@
+services:
+  scanner:
+    build:
+      context: .
+      dockerfile: docker/Dockerfile
+    volumes:
+      - .:/work
+    working_dir: /work
+    environment:
+      OLLAMA_HOST: ${OLLAMA_HOST:-http://host.docker.internal:11434}
+      VULNSCAN_MODEL: ${VULNSCAN_MODEL:-qwen3:8b}
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+
+  # Fine-tuning (vulnscan/rl). Needs an NVIDIA GPU visible to Docker.
+  trainer:
+    build:
+      context: .
+      dockerfile: docker/train.Dockerfile
+    volumes:
+      - .:/work
+    working_dir: /work
+    shm_size: "8gb"
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: all
+              capabilities: [gpu]

@@ -1,0 +1,49 @@
+{
+  "benchmarkpython": {
+    "entries": 1230,
+    "vulnerable": 452,
+    "leftover_hints": [
+      "benchmarkpython/testcode/BenchmarkTest00001.py:5: For details, please see https://owasp.org/www-project-benchmark.",
+      "benchmarkpython/testcode/BenchmarkTest00002.py:5: For details, please see https://owasp.org/www-project-benchmark.",
+      "benchmarkpython/testcode/BenchmarkTest00003.py:5: For details, please see https://owasp.org/www-project-benchmark.",
+      "benchmarkpython/testcode/BenchmarkTest00004.py:5: For details, please see https://owasp.org/www-project-benchmark.",
+      "benchmarkpython/testcode/BenchmarkTest00005.py:5: For details, please see https://owasp.org/www-project-benchmark.",
+      "benchmarkpython/testcode/BenchmarkTest00006.py:5: For details, please see https://owasp.org/www-project-benchmark.",
+      "benchmarkpython/testcode/BenchmarkTest00007.py:5: For details, please see https://owasp.org/www-project-benchmark.",
+      "benchmarkpython/testcode/BenchmarkTest00008.py:5: For details, please see https://owasp.org/www-project-benchmark.",
+      "benchmarkpython/testcode/BenchmarkTest00009.py:5: For details, please see https://owasp.org/www-project-benchmark.",
+      "benchmarkpython/testcode/BenchmarkTest00010.py:5: For details, please see https://owasp.org/www-project-benchmark."
+    ]
+  },
+  "sard-php": {
+    "entries": 4010,
+    "vulnerable": 0,
+    "leftover_hints": [
+      "sard-php/CWE-91/157535.php:55: $query = \"//User[@username='\". $tainted . \"']\";",
+      "sard-php/CWE-91/157632.php:55: $query = \"//User[username/text()=' $tainted ']\";",
+      "sard-php/CWE-91/157814.php:51: $query = \"//User[@username='\". $tainted . \"']\";",
+      "sard-php/CWE-91/157863.php:53: $query = \"//User[@id='\". $tainted . \"']\";",
+      "sard-php/CWE-91/157870.php:53: $query = sprintf(\"//User[@id='%u']\", $tainted);",
+      "sard-php/CWE-91/158097.php:52: $query = \"//User[@id='\". $tainted . \"']\";",
+      "sard-php/CWE-91/158104.php:52: $query = sprintf(\"//User[@id='%u']\", $tainted);",
+      "sard-php/CWE-91/158151.php:49: $query = sprintf(\"//User[@id=%u]\", $tainted);",
+      "sard-php/CWE-91/158193.php:49: $query = \"//User[@id='\". $tainted . \"']\";",
+      "sard-php/CWE-91/158196.php:49: $query = sprintf(\"//User[@id=%d]\", $tainted);"
+    ]
+  },
+  "xvwa": {
+    "entries": 16,
+    "vulnerable": 16,
+    "leftover_hints": []
+  },
+  "django.nv": {
+    "entries": 6,
+    "vulnerable": 6,
+    "leftover_hints": []
+  },
+  "vulpy": {
+    "entries": 486,
+    "vulnerable": 486,
+    "leftover_hints": []
+  }
+}

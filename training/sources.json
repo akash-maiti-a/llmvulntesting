@@ -1,0 +1,27 @@
+{
+  "_about": "Feasibility and label-accuracy gate for training sources (plan Step 1b). Accuracy: hand check of a random sample of labelled scanner alerts against the code (seed 0). Threshold 90%.",
+  "accepted": {
+    "benchmarkpython": {"repo": "OWASP-Benchmark/BenchmarkPython", "commit": "f1291485", "license": "GPL-3.0",
+                        "labels": "expectedresults-0.1.csv, per test file", "audit": "29 agree / 0 disagree / 1 unsure of 30 (97%)",
+                        "notes": "'safe' string literals correlated with the label (59% of safe vs 29% of vulnerable files); neutralised"},
+    "sard-php (safe cases only)": {"source": "NIST SARD test suite 103 (2015-10-27 PHP Vulnerability Test Suite)", "license": "permissive (per-file notice)",
+                        "labels": "manifest.sarif state=good, per file", "audit": "30 / 0 / 0 of 30 (100%)",
+                        "notes": "headers ('Safe sample'), //flaw markers and all comments stripped; $tainted renamed"},
+    "xvwa": {"repo": "s4n7h0/xvwa", "commit": "fb30fa51", "license": "GPL-3.0",
+             "labels": "one vulnerable module per directory", "audit": "19 / 0 / 0 of 19 (100%)",
+             "notes": "page headings naming the attack and the app's full name removed"},
+    "django.nv": {"repo": "nVisium/django.nV", "commit": "a48901f1", "license": "GPL-2.0",
+                  "labels": "in-app tutorial pages, function level", "audit": "6 / 0 / 0 of 6 (100%)",
+                  "notes": "'PURPOSELY INSECURE' banner and '# IDOR' / '# A10: Open Redirect' comments removed"},
+    "vulpy": {"repo": "fportantier/vulpy", "commit": "5249cc8b", "license": "MIT",
+              "labels": "weak: bad/ code that good/ changed", "audit": "4 / 0 / 0 of 4 (100%)",
+              "notes": "only 4 labelled alerts survive (one flow, two tools)"}
+  },
+  "rejected": {
+    "sard-php (unsafe cases)": "label accuracy 13 agree / 14 disagree / 3 unsure of 30 (43%): template labels, many 'unsafe' cases are not exploitable",
+    "DSVW": "label leak: the program's data lists every attack by name and appears in every prompt",
+    "Mutillidae II": "no line-level truth: the same code is vulnerable or safe depending on a runtime security level",
+    "Vulnerable-Flask-App (we45)": "no license",
+    "bWAPP (raesene mirror)": "no license on the mirror"
+  }
+}

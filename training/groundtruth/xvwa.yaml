@@ -1,0 +1,130 @@
+target: xvwa
+entries:
+- id: xvwa-cmdi-home
+  cwe: CWE-78
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: vulnerabilities/cmdi/home.php
+  note: cmdi
+- id: xvwa-sqli-home
+  cwe: CWE-89
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: vulnerabilities/sqli/home.php
+  note: sqli
+- id: xvwa-sqli_blind-home
+  cwe: CWE-89
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: vulnerabilities/sqli_blind/home.php
+  note: sqli_blind
+- id: xvwa-reflected_xss-home
+  cwe: CWE-79
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: vulnerabilities/reflected_xss/home.php
+  note: reflected_xss
+- id: xvwa-stored_xss-home
+  cwe: CWE-79
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: vulnerabilities/stored_xss/home.php
+  note: stored_xss
+- id: xvwa-fi-home
+  cwe: CWE-98
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: vulnerabilities/fi/home.php
+  note: fi
+- id: xvwa-redirect-home
+  cwe: CWE-601
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: vulnerabilities/redirect/home.php
+  note: redirect
+- id: xvwa-redirect-redirect
+  cwe: CWE-601
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: vulnerabilities/redirect/redirect.php
+  note: redirect
+- id: xvwa-ssrf_xspa-home
+  cwe: CWE-918
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: vulnerabilities/ssrf_xspa/home.php
+  note: ssrf_xspa
+- id: xvwa-ssti-home
+  cwe: CWE-1336
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: vulnerabilities/ssti/home.php
+  note: ssti
+- id: xvwa-ssti-ssti
+  cwe: CWE-1336
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: vulnerabilities/ssti/ssti.php
+  note: ssti
+- id: xvwa-php_object_injection-home
+  cwe: CWE-502
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: vulnerabilities/php_object_injection/home.php
+  note: php_object_injection
+- id: xvwa-xpath-home
+  cwe: CWE-643
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: vulnerabilities/xpath/home.php
+  note: xpath
+- id: xvwa-crypto-home
+  cwe: CWE-327
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: vulnerabilities/crypto/home.php
+  note: crypto
+- id: xvwa-crypto-PasswordHash
+  cwe: CWE-327
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: vulnerabilities/crypto/PasswordHash.php
+  note: crypto
+- id: xvwa-fileupload-home
+  cwe: CWE-434
+  vulnerable: true
+  scope: taint
+  exhaustive: false
+  locations:
+  - file: vulnerabilities/fileupload/home.php
+  note: fileupload
